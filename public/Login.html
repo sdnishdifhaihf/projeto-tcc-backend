@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroPulse | Sistema Neural de Terapia por Som</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css" />
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-dot bg-dot-1"></div>
+        <div class="bg-dot bg-dot-2"></div>
+        <div class="bg-dot bg-dot-3"></div>
+        <div class="bg-dot bg-dot-4"></div>
+        <div class="bg-line bg-line-1"></div>
+        <div class="bg-line bg-line-2"></div>
+        <div class="bg-pulse bg-pulse-1"></div>
+        <div class="bg-pulse bg-pulse-2"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sistema de Autenticação -->
+        <section class="auth-section" id="auth-section">
+            <div class="container">
+                <div class="brand-container">
+                    <h1 class="brand-title">NEURO<span class="gradient-text">PULSE</span></h1>
+                </div>
+                
+                <div class="auth-container">
+                    <!-- Tabs -->
+                    <div class="tab-wrapper">
+                        <div class="tabs">
+                            <button class="tab-btn active" data-tab="login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Login</span>
+                            </button>
+                            <button class="tab-btn" data-tab="register">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Cadastro</span>
+                            </button>
+                            <button class="tab-btn" data-tab="therapist">
+                                <i class="fas fa-user-md"></i>
+                                <span>Terapeuta</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Login -->
+                    <form class="auth-form active" id="login-form">
+                        <div class="form-header">
+                            <h3>
+                                <i class="fas fa-key"></i>
+                                Acesso ao Sistema
+                            </h3>
+                            <p>Entre com suas credenciais para acessar o NeuroPulse</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-email">E-mail</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="login-email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Senha</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="login-password" placeholder="Sua senha" required>
+                                <button type="button" class="toggle-password" title="Mostrar/Ocultar senha">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                <span>Lembrar acesso</span>
+                            </label>
+                            <a href="#" class="forgot-link">Esqueceu a senha?</a>
+                        </div>
+
+                        <!-- BOTÃO CORRIGIDO -->
+                        <button type="submit" class="btn-primary full-width" id="login-submit">
+                         <i class="fas fa-rocket"></i>
+                            <span>Acessar Plataforma</span>
+                            </button>
+
+                    </form>
+
+                    <!-- Formulário de Cadastro -->
+                    <form class="auth-form" id="register-form">
+                        <div class="form-header">
+                            <h3>
+                                <i class="fas fa-user-plus"></i>
+                                Nova Conta
+                            </h3>
+                            <p>Crie sua conta gratuitamente</p>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="register-name">Nome Completo *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="register-name" placeholder="Seu nome completo" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-email">E-mail *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="register-email" placeholder="seu@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-birth">Data de Nascimento *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-calendar"></i>
+                                    <input type="date" id="register-birth" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-gender">Gênero</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-venus-mars"></i>
+                                    <select id="register-gender">
+                                        <option value="">Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                        <option value="outro">Outro</option>
+                                        <option value="nao_informar">Prefiro não informar</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-heartbeat"></i>
+                                <h4>Informações de Saúde</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="health-condition">Condições (opcional)</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-brain"></i>
+                                    <select id="health-condition">
+                                        <option value="">Nenhuma condição específica</option>
+                                        <option value="tea">TEA (Transtorno do Espectro Autista)</option>
+                                        <option value="tdah">TDAH</option>
+                                        <option value="ansiedade">Ansiedade</option>
+                                        <option value="depressao">Depressão</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Acompanhamento Terapêutico</label>
+                                <div class="toggle-group">
+                                    <button type="button" class="toggle-btn active" data-value="sim">Sim</button>
+                                    <button type="button" class="toggle-btn" data-value="nao">Não</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Segurança</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-password">Senha *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="register-password" placeholder="Crie uma senha forte" required>
+                                    <button type="button" class="toggle-password" title="Mostrar/Ocultar senha">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill"></div>
+                                    </div>
+                                    <div class="strength-labels">
+                                        <span>Fraca</span>
+                                        <span>Média</span>
+                                        <span>Forte</span>
+                                        <span>Excelente</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-confirm">Confirmar Senha *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="register-confirm" placeholder="Digite a senha novamente" required>
+                                    <button type="button" class="toggle-password" title="Mostrar/Ocultar senha">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width" id="register-submit">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Criar Minha Conta</span>
+                        </button>
+
+                        <div class="form-footer">
+                            <p>Ao criar sua conta, você concorda com nossos <a href="#" class="terms-link">Termos de Uso</a> e <a href="#" class="privacy-link">Política de Privacidade</a>.</p>
+                        </div>
+                    </form>
+
+                    <!-- Formulário de Terapeuta -->
+                    <form class="auth-form" id="therapist-form">
+                        <div class="form-header">
+                            <h3>
+                                <i class="fas fa-user-md"></i>
+                                Área Profissional
+                            </h3>
+                            <p>Cadastro para profissionais da saúde</p>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-briefcase"></i>
+                                <h4>Profissão</h4>
+                            </div>
+
+                            <div class="profession-cards">
+                                <div class="prof-card" data-profession="musicoterapeuta">
+                                    <div class="card-icon">
+                                        <i class="fas fa-music"></i>
+                                    </div>
+                                    <h5>Musicoterapeuta</h5>
+                                    <p>Terapia por som</p>
+                                </div>
+
+                                <div class="prof-card" data-profession="psicologo">
+                                    <div class="card-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5>Psicólogo</h5>
+                                    <p>Psicologia clínica</p>
+                                </div>
+
+                                <div class="prof-card" data-profession="psiquiatra">
+                                    <div class="card-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <h5>Psiquiatra</h5>
+                                    <p>Medicina psiquiátrica</p>
+                                </div>
+
+                                <div class="prof-card active" data-profession="outro">
+                                    <div class="card-icon">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                    <h5>Outro</h5>
+                                    <p>Especificar</p>
+                                </div>
+                            </div>
+
+                            <!-- Campo para especificar outra profissão -->
+                            <div class="form-group" id="other-profession-container">
+                                <label for="other-profession">Especifique sua profissão *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-briefcase-medical"></i>
+                                    <input type="text" id="other-profession" placeholder="Ex: Fonoaudiólogo, Terapeuta Ocupacional...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="therapist-name">Nome Completo *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="therapist-name" placeholder="Nome completo" required>
+                                </div>
+                            </div>
+
+                            <!-- TELEFONE DO PROFISSIONAL -->
+                            <div class="form-group">
+                                <label for="therapist-phone">Telefone *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="therapist-phone" placeholder="(11) 99999-9999" required>
+                                </div>
+                            </div>
+
+                            <!-- EMAIL DO PROFISSIONAL -->
+                            <div class="form-group">
+                                <label for="therapist-email">E-mail Profissional *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="therapist-email" placeholder="email@profissional.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-register">CRP/CRT *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-id-card"></i>
+                                    <input type="text" id="therapist-register" placeholder="Número do registro" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-education">Formação *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <input type="text" id="therapist-education" placeholder="Formação acadêmica" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-birth">Data de Nascimento *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-calendar"></i>
+                                    <input type="date" id="therapist-birth" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAIXA DE OBSERVAÇÕES -->
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-edit"></i>
+                                <h4>Observações ou Descrição Adicional</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-observations">Observações (opcional)</label>
+                                <div class="textarea-wrapper">
+                                    <i class="fas fa-sticky-note"></i>
+                                    <textarea id="therapist-observations" 
+                                              placeholder="Descreva sua experiência, áreas de atuação específicas, metodologias utilizadas, ou qualquer informação adicional que considere relevante para sua prática profissional..."
+                                              rows="6"></textarea>
+                                </div>
+                                <div class="textarea-counter">
+                                    <span id="char-count">0</span>/1000 caracteres
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEÇÃO DE SEGURANÇA PARA TERAPEUTA -->
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Segurança</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-password">Senha *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="therapist-password" placeholder="Crie uma senha forte" required>
+                                    <button type="button" class="toggle-password" title="Mostrar/Ocultar senha">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill"></div>
+                                    </div>
+                                    <div class="strength-labels">
+                                        <span>Fraca</span>
+                                        <span>Média</span>
+                                        <span>Forte</span>
+                                        <span>Excelente</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="therapist-confirm">Confirmar Senha *</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="therapist-confirm" placeholder="Digite a senha novamente" required>
+                                    <button type="button" class="toggle-password" title="Mostrar/Ocultar senha">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Experiência</h4>
+                            </div>
+
+                            <div class="experience-slider">
+                                <input type="range" min="0" max="30" value="0" class="range-slider" id="experience-slider" title="Anos de experiência">
+                                <div class="slider-labels">
+                                    <span>0</span>
+                                    <span>5</span>
+                                    <span>10</span>
+                                    <span>15</span>
+                                    <span>20</span>
+                                    <span>25</span>
+                                    <span>30+</span>
+                                </div>
+                                <div class="slider-value" id="slider-value">0 anos de experiência</div>
+                            </div>
+
+                            <!-- Checkbox para experiência variada -->
+                            <div class="form-group form-group-margin-top">
+                                <label class="checkbox checkbox-center">
+                                    <input type="checkbox" id="varied-experience">
+                                    <span class="checkmark"></span>
+                                    <span>Experiência variada (diferentes áreas)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <div class="section-title-small">
+                                <i class="fas fa-star"></i>
+                                <h4>Especialidades</h4>
+                            </div>
+
+                            <div class="specialties-grid">
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="ansiedade">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-brain"></i>
+                                        Ansiedade
+                                    </span>
+                                </label>
+
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="depressao">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-cloud"></i>
+                                        Depressão
+                                    </span>
+                                </label>
+
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="autismo">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-puzzle-piece"></i>
+                                        Autismo
+                                    </span>
+                                </label>
+
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="tdah">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-bolt"></i>
+                                        TDAH
+                                    </span>
+                                </label>
+
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="estresse">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        Estresse
+                                    </span>
+                                </label>
+
+                                <label class="specialty-checkbox">
+                                    <input type="checkbox" name="specialties" value="alzheimer">
+                                    <span class="checkmark"></span>
+                                    <span class="specialty-label">
+                                        <i class="fas fa-memory"></i>
+                                        Alzheimer
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width" id="therapist-submit">
+                            <i class="fas fa-user-check"></i>
+                            <span>Enviar Cadastro</span>
+                        </button>
+
+                        <div class="form-footer">
+                            <p><i class="fas fa-clock"></i> Análise em até 48 horas úteis</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="neuro-footer">
+        <div class="container">
+            <div class="footer-center">
+                <h2 class="footer-brand-name">
+                    <span class="neuro">NEURO</span>
+                    <span class="pulse">PULSE</span>
+                </h2>
+                <!-- Copyright -->
+                 <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCxXccXkt6LRiPYYd17piXxg" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/neuropullse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+                <div class="footer-copyright">
+                    <p class="copyright-text">© 2025 NeuroPulse Technologies. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Login.js"></script>
+</body>
+</html>

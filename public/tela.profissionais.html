@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais de Saúde | NeuroPulse</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tela.profissionais.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="brand">NeuroPulse</div>
+        </div>
+        
+        <nav aria-label="Navegação principal">
+            <a href="Musicoterapia.html">Musicoterapia</a>
+        </nav>
+        
+        <div class="user-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            
+            <div class="user-profile-icon" id="userProfileIcon" tabindex="0" aria-label="Menu do perfil">
+                <img src="" alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="perfil.html" class="dropdown-item">
+                        <i class="fas fa-user"></i> Meu Perfil
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item logout-btn" id="headerLogoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">Encontre o Profissional Ideal</h1>
+            <p class="page-subtitle">Conecte-se com psicólogos, terapeutas e especialistas em saúde mental verificados pela NeuroPulse.</p>
+        </div>
+
+        <section class="search-section">
+            <div class="search-wrapper">
+                <div class="search-input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar por nome, especialidade ou abordagem...">
+                </div>
+                
+                <div class="filter-group">
+                    <select id="filterSpecialty">
+                        <option value="">Todas as especialidades</option>
+                        <option value="psicologo">Psicólogo</option>
+                        <option value="psicanalista">Psicanalista</option>
+                        <option value="terapeuta">Terapeuta</option>
+                        <option value="musicoterapeuta">Musicoterapeuta</option>
+                        <option value="neuropsicologo">Neuropsicólogo</option>
+                    </select>
+                </div>
+                
+                <button id="searchBtn" class="cta">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+            
+            <div class="quick-filters">
+                <button class="pill-filter active" data-filter="all">Todos</button>
+                <button class="pill-filter" data-filter="presencial"><i class="fas fa-map-marker-alt"></i> Presencial</button>
+                <button class="pill-filter" data-filter="verified"><i class="fas fa-check-circle"></i> Verificados</button>
+                <button class="pill-filter" data-filter="tea"><i class="fas fa-puzzle-piece"></i> Especialista em TEA</button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="section-header">
+                <div class="results-info">
+                    <h2 class="section-title">
+                        <i class="fas fa-user-md"></i>
+                        Profissionais Disponíveis
+                    </h2>
+                    <span class="results-count" id="totalProfessionals">Carregando...</span>
+                </div>
+                
+                <div class="sort-options">
+                    <label for="sortSelect">Ordenar por:</label>
+                    <select id="sortSelect">
+                        <option value="rating">Mais bem avaliados</option>
+                        <option value="experience">Mais experientes</option>
+                        <option value="name">Nome (A-Z)</option>
+                        <option value="price">Menor preço</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="professionals-grid" id="professionalsGrid">
+                <!-- Cards serão inseridos dinamicamente -->
+            </div>
+
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="cta secondary">
+                    <i class="fas fa-plus"></i> Carregar Mais
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="brand">NeuroPulse</div>
+            </div>
+            <p class="footer-text">Revolucionando o cuidado com a saúde mental através da terapia por som</p>
+            
+            <div class="social-links">
+                <a href="https://www.youtube.com/channel/UCxXccXkt6LRiPYYd17piXxg" aria-label="YouTube" target="_blank">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/neuropullse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" target="_blank">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+            </div>
+            
+            <p class="copyright">&copy; 2025 NeuroPulse Technologies. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Perfil -->
+    <div class="modal" id="professionalModal">
+        <div class="modal-content" id="professionalModalContent">
+            <!-- Conteúdo será inserido dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Modal de Agendamento -->
+    <div class="modal" id="scheduleModal">
+        <div class="modal-content" id="scheduleModalContent">
+            <!-- Conteúdo será inserido dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Modal de Contato -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('contactModal')">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Precisa de Ajuda?</h2>
+                <p>Nossa equipe de especialistas está pronta para te ajudar a encontrar o profissional ideal.</p>
+            </div>
+            <div class="modal-body">
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p>(11) 4004-2929</p>
+                        <button class="btn-copy" onclick="copyToClipboard('(11) 4004-2929', 'Telefone copiado!')">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 94004-2929</p>
+                        <a href="https://wa.me/5511940042929" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Enviar Mensagem
+                        </a>
+                    </div>
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p>suporte@neuropulse.com.br</p>
+                        <button class="btn-copy" onclick="copyToClipboard('suporte@neuropulse.com.br', 'E-mail copiado!')">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="tela.profissionais.js"></script>
+</body>
+</html>

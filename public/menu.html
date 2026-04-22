@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NeuroExplorer - Descubra os mistérios da mente humana através da neurociência">
+  <title>NeuroExplorer | Descubra os Mistérios da Mente Humana</title>
+
+  <!-- Pré-conexão para CDNs -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="logo">
+      <img src="/IMAGEM/LOGO ML.png" alt="NeuroExplorer - Cérebro com efeito neon" width="40" height="40">
+      <span class="brand">NeuroExplorer</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero" role="main">
+    <div class="waves" aria-hidden="true">
+      <svg class="wave-layer wave-layer-1" viewBox="0 0 1200 200" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="wg1" x1="0" x2="1">
+            <stop offset="0" stop-color="#8b5cf6"/>
+            <stop offset="1" stop-color="#ec4899"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,120 C150,200 350,40 600,100 C850,160 1050,60 1200,120 L1200,200 L0,200 Z" fill="none" stroke="url(#wg1)" stroke-width="2" stroke-opacity="0.7" stroke-linecap="round"/>
+      </svg>
+      <svg class="wave-layer wave-layer-2" viewBox="0 0 1200 200" preserveAspectRatio="none">
+        <path d="M0,140 C200,40 400,200 600,120 C800,40 1000,180 1200,120 L1200,200 L0,200 Z" fill="none" stroke="rgba(236,72,153,0.8)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="hero-left">
+        <h1>Descubra os Segredos da Mente Humana</h1>
+        <p class="lead">Embarque em uma jornada fascinante pela neurociência e desvende os mistérios do órgão mais complexo do universo — o cérebro humano.</p>
+        <a class="try" href="Login.html" aria-label="Iniciar exploração da neurociência">
+          Iniciar Exploração <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="hero-right">
+        <div class="device-mock">
+          <div class="brain-wrap">
+            <img src="/IMAGEM/LOGO ML.png" alt="Ilustração de cérebro com efeito neon" class="brain-image" width="340" height="340">
+            <div class="brain-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ESTRUTURA -->
+  <section id="estrutura" class="section" aria-labelledby="estrutura-title">
+    <h2 id="estrutura-title" class="section-title">Anatomia Cerebral</h2>
+    <div class="panel">
+      <div class="card">
+        <h2><i class="fas fa-brain" aria-hidden="true"></i> Arquitetura Complexa</h2>
+        <p>O cérebro humano é uma obra-prima da evolução, com mais de 86 bilhões de neurônios interconectados. Cada região especializada trabalha em harmonia para criar nossa experiência consciente.</p>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-bolt" aria-hidden="true"></i> Rede Neural Viva</h2>
+        <p>Imagine uma cidade com trilhões de conexões, onde sinais elétricos viajam a velocidades surpreendentes. É assim que seus neurônios se comunicam, criando pensamentos, memórias e emoções.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEUROCIÊNCIA -->
+  <section id="neurociencia" class="section" aria-labelledby="neurociencia-title">
+    <h2 id="neurociencia-title" class="section-title">Como a Mente Funciona</h2>
+    <div class="panel">
+      <div class="card">
+        <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> O Fenômeno do Pensamento</h2>
+        <p>Quando você tem uma ideia, milhões de neurônios disparam em padrões únicos, integrando informações de diferentes regiões cerebrais. É uma sinfonia neural que acontece em milésimos de segundo.</p>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-memory" aria-hidden="true"></i> A Ciência da Memória</h2>
+        <p>Nossas memórias não são gravações perfeitas, mas reconstruções ativas. Cada vez que recordamos algo, modificamos ligeiramente a memória original.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOPAMINA -->
+  <section id="dopamina" class="dopamine-section" aria-labelledby="dopamina-title">
+    <div class="dopamine-content">
+      <h2 id="dopamina-title"><i class="fas fa-star" aria-hidden="true"></i> Dopamina: A Química da Motivação</h2>
+      <p>Este neurotransmissor não é apenas sobre prazer — é sobre antecipação, motivação e a busca por recompensas. É o combustível que nos impulsiona a aprender, explorar e crescer.</p>
+      <a class="try" id="exploreNeurochemistry" aria-label="Explorar neuroquímica">
+        Explorar Neuroquímica <i class="fas fa-flask" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- CURIOSIDADES -->
+  <section id="curiosidades" class="section" aria-labelledby="curiosidades-title">
+    <h2 id="curiosidades-title" class="section-title">Mistérios do Cérebro</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+          <span><i class="fas fa-battery-full" aria-hidden="true"></i> O cérebro consome 20% da energia do corpo</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Seu cérebro pesa cerca de 1,5 kg e usa um quinto da energia que você consome. Ele é pequeno, mas faminto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section" aria-labelledby="contato-title">
+    <h2 id="contato-title" class="section-title">Junte-se à Exploração</h2>
+    <div class="panel">
+      <div class="card">
+        <h2><i class="fas fa-comments" aria-hidden="true"></i> Vamos Conversar</h2>
+        <p>Fascinado pelos mistérios da mente? Quer colaborar em projetos? Adoraríamos ouvir você.</p>
+      </div>
+      <div class="card">
+        <h2><i class="fas fa-newspaper" aria-hidden="true"></i> Fique por Dentro</h2>
+        <p>Receba atualizações sobre as descobertas mais recentes em neurociência e eventos da comunidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="logo">
+        <i class="fas fa-brain" aria-hidden="true"></i>
+        <span class="brand">NeuroExplorer</span>
+      </div>
+      <p>Desvendando os mistérios da mente humana através da ciência, curiosidade e colaboração.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+      <p class="copyright">
+        &copy; 2025 NeuroExplorer. Feito com <i class="fas fa-heart" aria-hidden="true"></i> para mentes curiosas.
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE NEUROQUÍMICA -->
+  <div class="modal-overlay" id="neurochemistryModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="neurochemistry-modal">
+      <button class="modal-close" id="closeModal" aria-label="Fechar modal">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <div class="neurochemistry-content">
+        <h2 id="modalTitle"><i class="fas fa-flask" aria-hidden="true"></i> Explorando a Neuroquímica</h2>
+        <p>Os neurotransmissores são mensageiros químicos que transmitem sinais entre neurônios, influenciando tudo, desde nossos movimentos até nossas emoções. Conheça os principais:</p>
+        
+        <div class="neurotransmitter-grid">
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-bolt" aria-hidden="true"></i> Dopamina</h3>
+            <p>Conhecida como o neurotransmissor do prazer e recompensa. Está envolvida na motivação, humor, atenção e aprendizagem.</p>
+            <span class="chemical-formula">C₈H₁₁NO₂</span>
+          </div>
+          
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-moon" aria-hidden="true"></i> Serotonina</h3>
+            <p>Regula o humor, apetite e sono. Baixos níveis estão associados à depressão e ansiedade.</p>
+            <span class="chemical-formula">C₁₀H₁₂N₂O</span>
+          </div>
+          
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-running" aria-hidden="true"></i> Noradrenalina</h3>
+            <p>Prepara o corpo para ação, aumentando o estado de alerta, atenção e frequência cardíaca em situações de estresse.</p>
+            <span class="chemical-formula">C₈H₁₁NO₃</span>
+          </div>
+          
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-comments" aria-hidden="true"></i> Acetilcolina</h3>
+            <p>Envolvida na aprendizagem, memória e contração muscular. É o principal neurotransmissor do sistema nervoso parassimpático.</p>
+            <span class="chemical-formula">C₇H₁₆NO₂⁺</span>
+          </div>
+          
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-ban" aria-hidden="true"></i> GABA</h3>
+            <p>O principal neurotransmissor inibitório do cérebro, que reduz a atividade neuronal e promove relaxamento.</p>
+            <span class="chemical-formula">C₄H₉NO₂</span>
+          </div>
+          
+          <div class="neurotransmitter-card">
+            <h3><i class="fas fa-plus-circle" aria-hidden="true"></i> Glutamato</h3>
+            <p>O principal neurotransmissor excitatório do cérebro, essencial para aprendizagem, memória e plasticidade neural.</p>
+            <span class="chemical-formula">C₅H₉NO₄</span>
+          </div>
+        </div>
+        
+        <div class="card card-spacer">
+          <h3><i class="fas fa-brain" aria-hidden="true"></i> Equilíbrio Químico</h3>
+          <p>O funcionamento ideal do cérebro depende do equilíbrio cuidadoso entre esses neurotransmissores. Distúrbios nesse equilíbrio podem afetar o humor, cognição e comportamento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS externo -->
+  <script src="menu.js"></script>
+</body>
+</html>

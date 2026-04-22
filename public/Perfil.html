@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | NeuroPulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Perfil.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <header>
+        <a href="menu.html" class="logo">
+            <div class="brand">NeuroPulse</div>
+        </a>
+        
+        <nav>
+            <a href="Musicoterapia.html">Musicoterapia</a>
+            <a href="Musicas.html">Músicas</a>
+            <a href="artigos.html">Artigos</a>
+            <a href="dop.html">Dopamina</a>
+            <a href="Quem-Somos.html">Contato</a>
+            <a href="idade.html">Beneficios</a> 
+            <a href="quiz.html">Quiz</a> 
+            <a href="perfil.html" class="active">Meu Perfil</a>
+        </nav>
+        
+        <div class="user-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="user-menu-btn" id="userMenuBtn" aria-label="Menu do usuário">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">Meu Perfil</h1>
+            <p class="page-subtitle">Gerencie sua conta, playlists e atividades no NeuroPulse</p>
+        </div>
+        
+        <div class="profile-container">
+            <!-- Sidebar do perfil -->
+            <aside class="profile-sidebar">
+                <div class="profile-header">
+                    <img src="https://ui-avatars.com/api/?name=Usuario+NeuroPulse&background=4361ee&color=fff&size=120" alt="Avatar do usuário" class="profile-avatar" id="profileAvatar">
+                    <h2 class="profile-name" id="profileName">Carregando...</h2>
+                    <p class="profile-email" id="profileEmail">Carregando...</p>
+                    <span class="profile-badge" id="profileBadge">Ouvinte Premium</span>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="statPlaylists">0</span>
+                        <span class="stat-label">Playlists</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="statSongs">0</span>
+                        <span class="stat-label">Músicas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="statSessions">0</span>
+                        <span class="stat-label">Sessões</span>
+                    </div>
+                </div>
+                
+                <ul class="profile-menu">
+                    <li><a href="#" class="active" data-section="personal-info"><i class="fas fa-user"></i> Informações Pessoais</a></li>
+                    <li><a href="#" data-section="playlists"><i class="fas fa-music"></i> Minhas Playlists</a></li>
+                    <li><a href="#" data-section="history"><i class="fas fa-history"></i> Histórico</a></li>
+                    <li><a href="#" data-section="statistics"><i class="fas fa-chart-line"></i> Estatísticas</a></li>
+                    <li><a href="#" id="editProfileBtn"><i class="fas fa-edit"></i> Editar Perfil</a></li>
+                    <li><a href="#" data-section="help"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+                    <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </aside>
+            
+            <!-- Conteúdo principal do perfil -->
+            <div class="profile-content">
+                <!-- Seção de Informações Pessoais -->
+                <section class="content-section active-section" id="personal-info-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Informações Pessoais</h2>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label class="info-label">Nome Completo</label>
+                            <p class="info-value" id="infoName">Carregando...</p>
+                        </div>
+                        <div class="info-item">
+                            <label class="info-label">E-mail</label>
+                            <p class="info-value" id="infoEmail">Carregando...</p>
+                        </div>
+                        <div class="info-item">
+                            <label class="info-label">Idade</label>
+                            <p class="info-value" id="infoAge">Carregando...</p>
+                        </div>
+                        <div class="info-item">
+                            <label class="info-label">Gênero</label>
+                            <p class="info-value" id="infoGender">Carregando...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Informações de Saúde -->
+                <section class="content-section active-section" id="health-info-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Informações de Saúde</h2>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label class="info-label">Condição</label>
+                            <p class="info-value" id="infoCondition">Carregando...</p>
+                        </div>
+                        <div class="info-item">
+                            <label class="info-label">Acompanhamento</label>
+                            <p class="info-value" id="infoTherapy">Carregando...</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Seção de atividades recentes -->
+                <section class="content-section active-section" id="activities-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Atividades Recentes</h2>
+                        <button class="btn btn-outline" id="viewAllActivities">Ver Todas</button>
+                    </div>
+                    
+                    <div class="activities-grid" id="activitiesGrid">
+                        <!-- As atividades serão carregadas dinamicamente -->
+                    </div>
+                </section>
+                
+                <!-- Seção de progresso -->
+                <section class="content-section active-section" id="progress-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Meu Progresso</h2>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-title">Sessões de Musicoterapia</span>
+                            <span class="progress-value" id="therapyProgressValue">0/20</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="therapyProgressFill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-title">Artigos Lidos</span>
+                            <span class="progress-value" id="articlesProgressValue">0/15</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="articlesProgressFill"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Playlists -->
+                <section class="content-section" id="playlists-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Minhas Playlists</h2>
+                        <button class="btn" id="createPlaylistBtn">Criar Playlist</button>
+                    </div>
+                    
+                    <div class="playlists-grid" id="playlistsGrid">
+                        <!-- Playlists serão carregadas dinamicamente -->
+                    </div>
+                </section>
+
+                <!-- Seção de Histórico -->
+                <section class="content-section" id="history-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Histórico de Atividades</h2>
+                        <button class="btn btn-outline" id="clearHistoryBtn">Limpar Histórico</button>
+                    </div>
+                    
+                    <div class="history-list" id="historyList">
+                        <!-- Histórico será carregado dinamicamente -->
+                    </div>
+                </section>
+
+                <!-- Seção de Estatísticas -->
+                <section class="content-section" id="statistics-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Minhas Estatísticas</h2>
+                        <div class="time-filter">
+                            <button class="btn-filter active" data-period="week">Semana</button>
+                            <button class="btn-filter" data-period="month">Mês</button>
+                            <button class="btn-filter" data-period="year">Ano</button>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3 class="stat-card-title">Tempo de Escuta</h3>
+                            <div class="stat-card-value" id="listeningTime">0h 0min</div>
+                            <div class="stat-card-change positive">+0%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <h3 class="stat-card-title">Sessões Completadas</h3>
+                            <div class="stat-card-value" id="sessionsCompleted">0</div>
+                            <div class="stat-card-change positive">+0%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <h3 class="stat-card-title">Artigos Lidos</h3>
+                            <div class="stat-card-value" id="articlesRead">0</div>
+                            <div class="stat-card-change positive">+0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3 class="chart-title">Atividade Semanal</h3>
+                        <div class="chart-placeholder">
+                            <p>Gráfico de atividades seria exibido aqui</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção de Ajuda -->
+                <section class="content-section" id="help-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Central de Ajuda</h2>
+                    </div>
+                    
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3 class="faq-question">Como criar uma playlist personalizada?</h3>
+                            <p class="faq-answer">Acesse a seção "Músicas", selecione as músicas desejadas e clique no botão "Adicionar à playlist". Você pode criar uma nova playlist ou adicionar a uma existente.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">Como funciona a musicoterapia no NeuroPulse?</h3>
+                            <p class="faq-answer">Nossas sessões de musicoterapia são guiadas por especialistas e utilizam técnicas baseadas em evidências científicas para promover bem-estar mental e emocional.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">Posso usar o NeuroPulse em múltiplos dispositivos?</h3>
+                            <p class="faq-answer">Sim, sua conta está sincronizada entre dispositivos. Basta fazer login em qualquer dispositivo com acesso à internet.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-support">
+                        <h3>Precisa de mais ajuda?</h3>
+                        <p>Entre em contato com nossa equipe de suporte:</p>
+                        <div class="contact-options">
+                            <a href="mailto:suporte@neuropulse.com" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> E-mail
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-comments"></i> Chat Online
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="menu.html" class="logo">
+                <div class="brand">NeuroPulse</div>
+            </a>
+            <p class="footer-description">Desvendando os mistérios da mente através do som</p>
+            
+            <div class="footer-links">
+                <a href="index.html">Início</a>
+                <a href="musicas.html">Músicas</a>
+                <a href="artigos.html">Artigos</a>
+                <a href="informacoes.html">Informações</a>
+                <a href="contato.html">Contato</a>
+                <a href="sobre.html">Sobre Nós</a>
+            </div>
+            
+            <p class="copyright">&copy; 2023 NeuroPulse. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para editar perfil -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Editar Perfil</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editName" class="form-label">Nome Completo</label>
+                    <input type="text" id="editName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEmail" class="form-label">E-mail</label>
+                    <input type="email" id="editEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="editAge" class="form-label">Idade</label>
+                    <input type="number" id="editAge" class="form-control" min="1" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="editGender" class="form-label">Gênero</label>
+                    <select id="editGender" class="form-control">
+                        <option value="">Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                        <option value="prefiro_nao_informar">Prefiro não informar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editCondition" class="form-label">Condição de Saúde (opcional)</label>
+                    <input type="text" id="editCondition" class="form-control" placeholder="Ex: Ansiedade, Insônia, etc.">
+                </div>
+                <div class="form-group">
+                    <label for="editPassword" class="form-label">Nova Senha (deixe em branco para manter a atual)</label>
+                    <input type="password" id="editPassword" class="form-control" placeholder="Digite uma nova senha">
+                </div>
+                <div class="form-group">
+                    <label for="editConfirmPassword" class="form-label">Confirmar Nova Senha</label>
+                    <input type="password" id="editConfirmPassword" class="form-control" placeholder="Confirme a nova senha">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" id="cancelEdit">Cancelar</button>
+                    <button type="submit" class="btn">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação de logout -->
+    <div class="modal" id="logoutModal">
+        <div class="modal-content small-modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirmar Saída</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja sair da sua conta?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancelLogout">Cancelar</button>
+                <button class="btn" id="confirmLogout">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Perfil.js"></script>
+    <script src="nav.js" defer></script>
+</body>
+</html>

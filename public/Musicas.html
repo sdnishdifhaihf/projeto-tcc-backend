@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NeuroPulse - Playlists científicas para saúde mental: músicas otimizadas para foco, relaxamento e bem-estar">
+  <title>NeuroPulse | Playlists Recomendadas</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Musicas.css">
+</head>
+<body>
+  <header>
+    <a href="menu.html" class="logo">
+      <div class="brand">NeuroPulse</div>
+    </a>
+    
+  <nav>
+        <!-- Seus links de navegação aqui -->
+        <a href="Musicoterapia.html">Musicoterapia</a>
+        <a href="Musicas.html" class="active">Músicas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="dop.html" >Neurotransmissores</a>
+        <a href="Quem-Somos.html">Sobre</a>
+        <a href="idade.html">Beneficios</a> 
+        <a href="quiz.html">Quiz</a>
+
+    </nav>
+    
+    <div class="user-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      
+      <div class="user-profile-icon" id="userProfileIcon" tabindex="0" aria-label="Menu do perfil">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iIzhiNWNmNiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMjAgMTguMDAwMUMyMi4yMDkxIDE4LjAwMDEgMjQgMTYuMjA5MiAyNCAxNC4wMDAxQzI0IDExLjc5MSAyMi4yMDkxIDEwLjAwMDEgMjAgMTAuMDAwMUMxNy43OTA5IDEwLjAwMDEgMTYgMTEuNzkxIDE2IDE0LjAwMDFDMTYgMTYuMjA5MiAxNy43OTA5IDE4LjAwMDEgMjAgMTguMDAwMVoiIGZpbGw9IiM4YjVjZjYiLz48cGF0aCBkPSJNMjAgMjAuMDAwMUMxNi42ODYzIDIwLjAwMDEgMTQgMjIuNjg2NCAxNCAyNi4wMDAxVjI4LjAwMDFIMjZWMjYuMDAwMUMyNiAyMi42ODY0IDIzLjMxMzcgMjAuMDAwMSAyMCAyMC4wMDAxWiIgZmlsbD0iIzhiNWNmNiIvPjwvc3ZnPg==" 
+             alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+        <div class="profile-dropdown" id="profileDropdown">
+          <a href="perfil.html" class="dropdown-item">
+            <i class="fas fa-user"></i> Meu Perfil
+          </a>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item logout-btn" id="headerLogoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Sair
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Playlists Científicas</h1>
+      <p class="page-subtitle">Seleções musicais otimizadas para transformar estados mentais e melhorar performance cognitiva</p>
+    </div>
+    
+    <section class="mood-section" aria-labelledby="mood-title">
+      <h2 class="section-title" id="mood-title">
+        <i class="fas fa-heartbeat"></i>
+        Escolha seu estado mental
+      </h2>
+      
+      <div class="mood-selector">
+        <button class="mood-btn active" data-mood="all" aria-label="Mostrar todas as playlists">
+          <i class="fas fa-layer-group"></i>
+          <span>Todas</span>
+        </button>
+        <button class="mood-btn" data-mood="focus" aria-label="Playlists para foco e concentração">
+          <i class="fas fa-bullseye"></i>
+          <span>Foco</span>
+        </button>
+        <button class="mood-btn" data-mood="relax" aria-label="Playlists para relaxamento">
+          <i class="fas fa-spa"></i>
+          <span>Relaxar</span>
+        </button>
+        <button class="mood-btn" data-mood="sleep" aria-label="Playlists para sono">
+          <i class="fas fa-moon"></i>
+          <span>Sono</span>
+        </button>
+        <button class="mood-btn" data-mood="energy" aria-label="Playlists para energia">
+          <i class="fas fa-bolt"></i>
+          <span>Energia</span>
+        </button>
+      </div>
+    </section>
+    
+    <section class="playlists-section" aria-labelledby="playlists-title">
+      <h2 class="section-title" id="playlists-title">
+        <i class="fas fa-star"></i>
+        Playlists Recomendadas
+      </h2>
+      
+      <div class="cards-grid">
+        <!-- Playlist 1 - Foco -->
+        <div class="playlist-card" data-category="focus">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-bullseye"></i>
+              <span>Foco Intenso</span>
+            </div>
+            <div class="card-duration">2h 30min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/FOCO.png" alt="Música para concentração e estudo">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Concentração Máxima</h3>
+            <p class="card-description">Música instrumental para estudos profundos e trabalho que exige atenção total. Baseado em frequências que estimulam o foco.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>45 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>85% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX8ucVJaqqjpS" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=4pcNRDx6KrE&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX0" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Playlist 2 - Relaxamento -->
+        <div class="playlist-card" data-category="relax">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-spa"></i>
+              <span>Relaxamento</span>
+            </div>
+            <div class="card-duration">3h 15min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/RELAXAR.png" alt="Música para relaxamento e meditação">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Alívio do Estresse</h3>
+            <p class="card-description">Sons naturais e meditações guiadas para acalmar a mente. Ideal para momentos de pausa e recuperação mental.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>38 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>92% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWZqd5JICZI0u" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=1ZYbU82GVz4&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX1" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Playlist 3 - Sono -->
+        <div class="playlist-card" data-category="sleep">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-moon"></i>
+              <span>Sono Profundo</span>
+            </div>
+            <div class="card-duration">8h 00min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/SONO.png" alt="Música para sono e descanso">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Sono Reparador</h3>
+            <p class="card-description">Sequências noturnas para induzir e manter o sono profundo. Frequências delta para descanso completo.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>25 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>88% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DWYcDQ1hSjOpY" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=a3J9Q0K1c_s&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX2" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Playlist 4 - Criatividade -->
+        <div class="playlist-card" data-category="focus">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-lightbulb"></i>
+              <span>Criatividade</span>
+            </div>
+            <div class="card-duration">2h 45min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/CRIATIVIDADE.png" alt="Música para criatividade e inspiração">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Fluxo Criativo</h3>
+            <p class="card-description">Composições que estimulam pensamento divergente e inovação. Ideal para artistas e criativos.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>42 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>78% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=4bUqp48x9gI&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX3" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Playlist 5 - Energia -->
+        <div class="playlist-card" data-category="energy">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-bolt"></i>
+              <span>Energia</span>
+            </div>
+            <div class="card-duration">1h 50min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/FOCO.png" alt="Música para energia e produtividade">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Produtividade Acelerada</h3>
+            <p class="card-description">Ritmos otimizados para estados de fluxo e alta performance. Mantenha o foco por períodos prolongados.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>22 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>82% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX8tZsk68tuDw" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=5qap5aO4i9A&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX4" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Playlist 6 - Natureza -->
+        <div class="playlist-card" data-category="relax">
+          <div class="card-header">
+            <div class="card-badge">
+              <i class="fas fa-tree"></i>
+              <span>Natureza</span>
+            </div>
+            <div class="card-duration">4h 20min</div>
+          </div>
+          
+          <div class="card-image">
+            <img src="/IMAGEM/NATUREZA.png" alt="Sons da natureza para meditação">
+            <div class="card-overlay">
+              <button class="play-btn" aria-label="Reproduzir prévia">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h3 class="card-title">Natureza & Meditação</h3>
+            <p class="card-description">Paisagens sonoras naturais com instruções de mindfulness. Reduz cortisol e promove calma.</p>
+            
+            <div class="card-stats">
+              <div class="stat">
+                <i class="fas fa-music"></i>
+                <span>35 faixas</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <span>90% eficácia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DX8mWv7JDZ0Ht" target="_blank" class="action-btn spotify-btn" aria-label="Abrir no Spotify">
+              <i class="fab fa-spotify"></i>
+              <span>Spotify</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=0fYL_qiDYf0&list=PL9F0qQ9f2DmZ7eWEl9rNDY2-0p_CI7wX5" target="_blank" class="action-btn youtube-btn" aria-label="Abrir no YouTube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="guide-section" aria-labelledby="guide-title">
+      <h2 class="section-title" id="guide-title">
+        <i class="fas fa-compass"></i>
+        Como Usar as Playlists
+      </h2>
+      
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-icon">
+            <i class="fas fa-headphones"></i>
+          </div>
+          <h3 class="guide-title">Use Fones de Ouvido</h3>
+          <p class="guide-description">Para imersão total e melhor qualidade sonora, fones oferecem experiência otimizada.</p>
+        </div>
+        
+        <div class="guide-card">
+          <div class="guide-icon">
+            <i class="fas fa-volume-down"></i>
+          </div>
+          <h3 class="guide-title">Volume Moderado</h3>
+          <p class="guide-description">Mantenha volume confortável para evitar fadiga auditiva e maximizar benefícios.</p>
+        </div>
+        
+        <div class="guide-card">
+          <div class="guide-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="guide-title">Rotina Consistente</h3>
+          <p class="guide-description">Use regularmente para consolidar efeitos positivos a longo prazo na mente.</p>
+        </div>
+        
+        <div class="guide-card">
+          <div class="guide-icon">
+            <i class="fas fa-couch"></i>
+          </div>
+          <h3 class="guide-title">Ambiente Confortável</h3>
+          <p class="guide-description">Escolha local tranquilo sem distrações para melhor experiência auditiva.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="benefits-section" aria-labelledby="benefits-title">
+      <h2 class="section-title" id="benefits-title">
+        <i class="fas fa-chart-line"></i>
+        Benefícios Científicos
+      </h2>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="benefit-title">+25% Foco</h3>
+          <p class="benefit-description">Melhora significativa na concentração e produtividade cognitiva</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="benefit-title">-30% Estresse</h3>
+          <p class="benefit-description">Redução comprovada nos níveis de cortisol no organismo</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-bed"></i>
+          </div>
+          <h3 class="benefit-title">Sono Melhor</h3>
+          <p class="benefit-description">Qualidade do sono aumentada em 40% com uso regular</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="benefit-title">Criatividade</h3>
+          <p class="benefit-description">Estímulo ao pensamento divergente e soluções inovadoras</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="brand">NeuroPulse</div>
+      </div>
+      <p class="footer-text">Conectando mente e música através da neurociência</p>
+      
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCxXccXkt6LRiPYYd17piXxg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/neuropullse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+      </div>
+      
+      <p class="copyright">&copy; 2024 NeuroPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="Musicas.js"></script>
+</body>
+</html>

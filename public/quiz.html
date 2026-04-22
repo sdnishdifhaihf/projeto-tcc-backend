@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroPulse | Quiz Musical</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="quiz.css">
+  
+  <style>
+    /* Estilos para as playlists específicas */
+    .playlist-container {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .playlist-card {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-left: 4px solid var(--accent1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .playlist-card:hover {
+      transform: translateY(-3px);
+    }
+    
+    .playlist-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .playlist-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 5px;
+    }
+    
+    .playlist-mood {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(139, 92, 246, 0.1);
+      color: var(--accent1);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    
+    .playlist-description {
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .songs-list {
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .song-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .song-item:last-child {
+      border-bottom: none;
+    }
+    
+    .song-number {
+      width: 30px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    .song-info {
+      flex: 1;
+    }
+    
+    .song-title {
+      font-weight: 500;
+      color: var(--text-light);
+      margin-bottom: 3px;
+    }
+    
+    .song-artist {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    
+    .song-duration {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    
+    .playlist-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .play-all-btn {
+      flex: 1;
+    }
+    
+    .save-playlist-btn {
+      background: transparent;
+      border: 1px solid var(--accent1);
+      color: var(--accent1);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tema claro */
+    [data-theme="light"] .playlist-card {
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    [data-theme="light"] .songs-list {
+      background: rgba(0,0,0,0.02);
+    }
+    
+    [data-theme="light"] .song-item {
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    /* Estilo para resultado */
+    .playlist-match-info {
+      background: rgba(139, 92, 246, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px 0;
+      border-left: 3px solid var(--accent1);
+    }
+    
+    .match-percentage {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .match-text {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <header>
+    <a href="menu.html" class="logo">
+      <div class="brand">NeuroPulse</div>
+    </a>
+    
+    <nav>
+      <a href="Musicoterapia.html">Musicoterapia</a>
+      <a href="Musicas.html">Músicas</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="dop.html">Neurotransmissores</a>
+      <a href="Quem-Somos.html">Sobre</a>
+      <a href="idade.html">Beneficios</a> 
+      <a href="quiz.html" class="active">Quiz</a>
+    </nav>
+    
+    <div class="user-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h1 class="quiz-title">Quiz Musical</h1>
+        <p class="quiz-subtitle">Descubra a playlist perfeita para o seu momento</p>
+      </div>
+      
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress" id="quiz-progress" style="width: 0%;"></div>
+        </div>
+        <div class="progress-text">
+          <span id="current-question">1</span> de <span id="total-questions">6</span> perguntas
+        </div>
+      </div>
+      
+      <div class="question-container" id="question-container">
+        <div class="question-number">Pergunta <span id="question-num">1</span></div>
+        <h2 class="question-text" id="question-text">Carregando pergunta...</h2>
+        
+        <div class="options-container" id="options-container">
+          <!-- Options will be loaded dynamically -->
+        </div>
+        
+        <div class="quiz-navigation">
+          <button class="btn btn-outline" id="prev-btn" disabled>
+            <i class="fas fa-arrow-left"></i>
+            Anterior
+          </button>
+          <button class="btn" id="next-btn" disabled>
+            Próxima
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="result-container" id="result-container" style="display: none;">
+        <div class="result-icon">
+          <i class="fas fa-music"></i>
+        </div>
+        <h2 class="result-title" id="result-title">Playlist Recomendada</h2>
+        
+        <div class="playlist-match-info">
+          <div class="match-percentage" id="match-percentage">0%</div>
+          <p class="match-text" id="match-text">Compatibilidade com seu perfil</p>
+        </div>
+        
+        <p class="result-description" id="result-description">
+          Com base nas suas respostas, preparamos uma seleção musical perfeita para o seu momento atual.
+        </p>
+        
+        <!-- Container para playlists recomendadas -->
+        <div id="playlist-recommendation-container"></div>
+        
+        <div class="quiz-navigation">
+          <button class="btn btn-outline" id="restart-btn">
+            <i class="fas fa-redo"></i>
+            Refazer Quiz
+          </button>
+          <a href="Musicas.html" class="btn" id="explore-music-btn">
+            Explorar Mais Músicas
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="brand">NeuroPulse</div>
+      </div>
+      <p class="footer-text">Conectando mente e música através da neurociência</p>
+      
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCxXccXkt6LRiPYYd17piXxg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/neuropullse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      
+      <p class="copyright">&copy; 2025 NeuroPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="quiz.js" defer></script>
+</body>
+</html>

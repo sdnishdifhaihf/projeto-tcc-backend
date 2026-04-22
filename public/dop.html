@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroPulse | Neurotransmissores e Sistema de Recompensa</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="dop.css">
+</head>
+<body>
+
+ <header>
+    <a href="menu.html" class="logo">
+        <div class="brand">NeuroPulse</div>
+    </a>
+    
+    <nav>
+        <!-- Seus links de navegação aqui -->
+        <a href="Musicoterapia.html">Musicoterapia</a>
+        <a href="Musicas.html">Músicas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="dop.html">Dopamina</a>
+        <a href="Quem-Somos.html">Sobre</a>
+        <a href="idade.html">Beneficios</a> 
+        <a href="quiz.html">Quiz</a> 
+        <!-- Adicione o link para o perfil -->
+        <a href="perfil.html">Meu Perfil</a>
+    </nav>
+    
+    <div class="user-actions">
+        <!-- Botão do Tema -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        
+        <!-- ÍCONE DO PERFIL COM FOTO -->
+        <div class="user-profile-icon" id="userProfileIcon">
+            <img src="" alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="perfil.html" class="dropdown-item">
+                    <i class="fas fa-user"></i> Meu Perfil
+                </a>
+                <a href="configuracoes.html" class="dropdown-item">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+                <div class="dropdown-divider"></div>
+                <button class="dropdown-item logout-btn" id="headerLogoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <main class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Neurotransmissores e Sistema de Recompensa</h1>
+      <p class="page-subtitle">Compreenda a química cerebral que controla motivação, prazer e comportamento humano</p>
+    </div>
+    
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>A Dopamina: A Moeda Química do Cérebro</h2>
+        <p>A dopamina é um dos neurotransmissores mais estudados e importantes do sistema nervoso, atuando como mensageiro químico fundamental para motivação, recompensa e movimento.</p>
+        <p>Conhecida como a "molécula da motivação", a dopamina influencia desde decisões simples até comportamentos complexos, moldando nossa experiência de prazer e direcionando nossas ações.</p>
+        
+        <button id="show-info-btn" class="cta">
+          <i class="fas fa-brain" aria-hidden="true"></i>
+          Explorar Dopamina
+        </button>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-atom" aria-hidden="true"></i>
+      </div>
+    </section>
+    
+    <div id="more-info" class="info-hidden">
+
+      <section class="info-section">
+        <h2 class="section-title">
+          <i class="fas fa-vial" aria-hidden="true"></i>
+          Principais Neurotransmissores
+        </h2>
+        
+        <div class="neurotransmitters-grid">
+          <div class="nt-card dopamine">
+            <div class="nt-header">
+              <div class="nt-icon dopamine">
+                <i class="fas fa-bolt" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">Dopamina</h3>
+                <div class="nt-subtitle">Motivação & Recompensa</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Neurotransmissor crucial para o sistema de recompensa, motivação, prazer e controle motor.</p>
+              <ul>
+                <li>Regula motivação e desejo</li>
+                <li>Controla movimento voluntário</li>
+                <li>Modula humor e atenção</li>
+                <li>Essencial para aprendizado</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="nt-card serotonin">
+            <div class="nt-header">
+              <div class="nt-icon serotonin">
+                <i class="fas fa-sun" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">Serotonina</h3>
+                <div class="nt-subtitle">Humor & Bem-estar</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Regulador chave do humor, apetite, sono e funções cognitivas.</p>
+              <ul>
+                <li>Controla humor e emoções</li>
+                <li>Regula ciclo sono-vigília</li>
+                <li>Influencia apetite e digestão</li>
+                <li>Modula ansiedade e estresse</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="nt-card noradrenaline">
+            <div class="nt-header">
+              <div class="nt-icon noradrenaline">
+                <i class="fas fa-running" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">Noradrenalina</h3>
+                <div class="nt-subtitle">Alerta & Excitação</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Fundamental para estados de alerta, excitação e resposta ao estresse.</p>
+              <ul>
+                <li>Controla estado de alerta</li>
+                <li>Media resposta ao estresse</li>
+                <li>Regula atenção e foco</li>
+                <li>Influencia ritmo cardíaco</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="nt-card gaba">
+            <div class="nt-header">
+              <div class="nt-icon gaba">
+                <i class="fas fa-peace" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">GABA</h3>
+                <div class="nt-subtitle">Relaxamento & Calma</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Principal neurotransmissor inibitório do sistema nervoso central.</p>
+              <ul>
+                <li>Promove relaxamento</li>
+                <li>Reduz ansiedade</li>
+                <li>Facilita o sono</li>
+                <li>Controla excitabilidade neural</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="nt-card glutamate">
+            <div class="nt-header">
+              <div class="nt-icon glutamate">
+                <i class="fas fa-fire" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">Glutamato</h3>
+                <div class="nt-subtitle">Excitação & Aprendizado</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Principal neurotransmissor excitatório, crucial para aprendizado e memória.</p>
+              <ul>
+                <li>Media excitação neural</li>
+                <li>Essencial para plasticidade</li>
+                <li>Fundamental para memória</li>
+                <li>Regula desenvolvimento</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nt-card histamine">
+            <div class="nt-header">
+              <div class="nt-icon histamine">
+                <i class="fas fa-bell" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="nt-title">Histamina</h3>
+                <div class="nt-subtitle">Alerta & Resposta Imune</div>
+              </div>
+            </div>
+            <div class="nt-content">
+              <p>Atua na regulação do ciclo sono-vigília, resposta alérgica e funções gástricas.</p>
+              <ul>
+                <li>Promove o estado de alerta</li>
+                <li>Media respostas inflamatórias</li>
+                <li>Regula a produção de ácido</li>
+                <li>Envolvida em reações alérgicas</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </section>
+      
+      <section class="info-section" id="dopamina">
+        <h2 class="section-title">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          Dopamina: A Molécula da Motivação
+        </h2>
+        
+        <div class="reward-system">
+          <h3 style="font-size: 1.6rem; margin-bottom: 20px; color: var(--dopamine);">O Sistema de Recompensa da Dopamina</h3>
+          <p style="color: var(--muted); margin-bottom: 30px;">A dopamina opera através de um sofisticado sistema de recompensa que motiva comportamentos essenciais para sobrevivência e bem-estar.</p>
+          
+          <div class="reward-steps">
+            <div class="reward-step">
+              <div class="step-icon">
+                <i class="fas fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <h4 class="step-title">Antecipação</h4>
+              <p class="step-description">A dopamina aumenta na expectativa de recompensa, criando motivação para ação</p>
+            </div>
+            
+            <div class="reward-step">
+              <div class="step-icon">
+                <i class="fas fa-trophy" aria-hidden="true"></i>
+              </div>
+              <h4 class="step-title">Recompensa</h4>
+              <p class="step-description">Liberação de dopamina ao atingir objetivos, reforçando comportamentos bem-sucedidos</p>
+            </div>
+            
+            <div class="reward-step">
+              <div class="step-icon">
+                <i class="fas fa-brain" aria-hidden="true"></i>
+              </div>
+              <h4 class="step-title">Aprendizado</h4>
+              <p class="step-description">Consolida conexões neurais que associam ações específicas com recompensas</p>
+            </div>
+            
+            <div class="reward-step">
+              <div class="step-icon">
+                <i class="fas fa-redo" aria-hidden="true"></i>
+              </div>
+              <h4 class="step-title">Repetição</h4>
+              <p class="step-description">Motiva repetição de comportamentos que levam a recompensas anteriores</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chemical-structure">
+          <h3 style="font-size: 1.6rem; margin-bottom: 15px;">Estrutura Química da Dopamina</h3>
+          <p style="color: var(--muted); margin-bottom: 20px;">C₈H₁₁NO₂ - Uma catecolamina sintetizada a partir do aminoácido tirosina</p>
+          
+          <div class="molecule" role="img" aria-label="Estrutura química da Dopamina: C 8 H 11 N O 2">
+            <pre>
+    HO
+     │
+    HO—C₆H₄—CH₂—CH₂—NH₂
+     │
+    HO
+            </pre>
+          </div>
+          <p style="color: var(--muted); font-size: 0.9rem;">Formula: C₈H₁₁NO₂ | Peso molecular: 153.18 g/mol</p>
+        </div>
+      </section>
+      
+      <section class="info-section">
+        <h2 class="section-title">
+          <i class="fas fa-stethoscope" aria-hidden="true"></i>
+          Doenças Relacionadas à Dopamina
+        </h2>
+        
+        <div class="diseases-grid">
+            <div class="disease-card">
+              <div class="disease-header">
+                <div class="disease-icon">
+                  <i class="fas fa-parking" aria-hidden="true"></i>
+                </div>
+                <h3 class="disease-title">Doença de Parkinson</h3>
+              </div>
+              <div class="disease-content">
+                <p>Doença neurodegenerativa caracterizada pela perda de neurônios produtores de dopamina na substância negra.</p>
+                <ul class="disease-symptoms">
+                  <li>Tremores em repouso</li>
+                  <li>Rigidez muscular</li>
+                  <li>Bradicinesia (lentidão de movimentos)</li>
+                  <li>Instabilidade postural</li>
+                </ul>
+                <p><strong>Tratamento:</strong> Levodopa, agonistas dopaminérgicos, terapia profunda.</p>
+              </div>
+            </div>
+            
+            <div class="disease-card">
+              <div class="disease-header">
+                <div class="disease-icon">
+                  <i class="fas fa-head-side-virus" aria-hidden="true"></i>
+                </div>
+                <h3 class="disease-title">Esquizofrenia</h3>
+              </div>
+              <div class="disease-content">
+                <p>Transtorno mental caracterizado por desregulação do sistema dopaminérgico, especialmente via mesolímbica.</p>
+                <ul class="disease-symptoms">
+                  <li>Alucinações e delírios</li>
+                  <li>Pensamento desorganizado</li>
+                  <li>Sintomas negativos (apatia)</li>
+                  <li>Déficits cognitivos</li>
+                </ul>
+                <p><strong>Tratamento:</strong> Antipsicóticos (bloqueadores de D2), terapia psicossocial.</p>
+              </div>
+            </div>
+            
+            <div class="disease-card">
+              <div class="disease-header">
+                <div class="disease-icon">
+                  <i class="fas fa-pills" aria-hidden="true"></i>
+                </div>
+                <h3 class="disease-title">Dependência Química</h3>
+              </div>
+              <div class="disease-content">
+                <p>Disfunção do sistema de recompensa onde drogas hiperestimulam a liberação de dopamina, causando adaptação neural.</p>
+                <ul class="disease-symptoms">
+                  <li>Compulsão por uso</li>
+                  <li>Tolerância aumentada</li>
+                  <li>Síndrome de abstinência</li>
+                  <li>Prejuíso no controle</li>
+                </ul>
+                <p><strong>Tratamento:</strong> Terapia comportamental, medicações, suporte social.</p>
+              </div>
+            </div>
+            
+            <div class="disease-card">
+              <div class="disease-header">
+                <div class="disease-icon">
+                  <i class="fas fa-restroom" aria-hidden="true"></i>
+                </div>
+                <h3 class="disease-title">TDAH</h3>
+              </div>
+              <div class="disease-content">
+                <p>Transtorno neurodesenvolvimental com alterações nos sistemas dopaminérgico e noradrenérgico no córtex pré-frontal.</p>
+                <ul class="disease-symptoms">
+                  <li>Desatenção sustentada</li>
+                  <li>Hiperatividade motora</li>
+                  <li>Impulsividade</li>
+                  <li>Déficits executivos</li>
+                </ul>
+                <p><strong>Tratamento:</strong> Estimulantes (metilfenidato), terapia comportamental.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      
+      <section class="info-section">
+        <h2 class="section-title">
+          <i class="fas fa-balance-scale" aria-hidden="true"></i>
+          Equilíbrio Dopaminérgico
+        </h2>
+        
+        <div class="balance-section">
+            <div class="balance-card">
+              <div class="balance-icon">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+              </div>
+              <h3 class="balance-title">Dopamina Alta</h3>
+              <ul class="balance-list">
+                <li>Motivação e drive aumentados</li>
+                <li>Foco e concentração aguçados</li>
+                <li>Sensação de prazer e recompensa</li>
+                <li>Possível ansiedade e agitação</li>
+                <li>Risco de psicose em excesso</li>
+              </ul>
+            </div>
+            
+            <div class="balance-card">
+              <div class="balance-icon">
+                <i class="fas fa-arrow-down" aria-hidden="true"></i>
+              </div>
+              <h3 class="balance-title">Dopamina Baixa</h3>
+              <ul class="balance-list">
+                <li>Falta de motivação e apatia</li>
+                <li>Fadiga e letargia</li>
+                <li>Dificuldade de concentração</li>
+                <li>Depressão e anedonia</li>
+                <li>Problemas motores (Parkinson)</li>
+              </ul>
+            </div>
+            
+            <div class="balance-card">
+              <div class="balance-icon">
+                <i class="fas fa-balance-scale-right" aria-hidden="true"></i>
+              </div>
+              <h3 class="balance-title">Regulação Natural</h3>
+              <ul class="balance-list">
+                <li>O corpo regula a dopamina através de receptores (D1-D5) e enzimas (como MAO e COMT) que a degradam.</li>
+                <li>Fatores genéticos podem influenciar a sensibilidade dos receptores.</li>
+                <li>O estilo de vida afeta diretamente a produção e a recaptação.</li>
+              </ul>
+            </div>
+
+            <div class="balance-card">
+              <div class="balance-icon">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+              </div>
+              <h3 class="balance-title">Otimização Saudável</h3>
+              <ul class="balance-list">
+                <li>Alimentação rica em tirosina (precursor encontrado em ovos, nozes, carnes).</li>
+                <li>Exercício físico regular (aumenta a sensibilidade dos receptores).</li>
+                <li>Sono de qualidade e reparador.</li>
+                <li>Concluir pequenas tarefas (gera liberações naturais).</li>
+              </ul>
+            </div>
+        </div>
+      </section>
+      
+      <section class="cta-section">
+        <h2>Quer Aprender Mais Sobre Neurociência?</h2>
+        <p>Explore nossos artigos científicos, cursos e recursos sobre neurotransmissores, saúde mental e funcionamento cerebral.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="artigos.html" class="cta">
+            <i class="fas fa-book" aria-hidden="true"></i>
+            Ver Artigos Científicos
+          </a>
+          <a href="contato.html" class="cta" style="background: transparent; border: 2px solid var(--accent1);">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            Cursos Online
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main> <footer>
+    <div class="footer-content">
+      <div class="logo" style="justify-content: center;">
+        <div class="brand">NeuroPulse</div>
+      </div>
+      <p style="margin: 20px 0; color: var(--muted);">Desvendando os mistérios do cérebro humano</p>
+      
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+      
+      <p class="copyright">&copy; 2023 NeuroPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="dop.js" defer></script>
+</body>
+</html>

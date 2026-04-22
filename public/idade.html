@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroPulse | A Música ao Longo da Vida</title>
+    <meta name="description" content="Descubra como a música impacta o desenvolvimento humano desde a gestação até a terceira idade. Benefícios científicos e recomendações musicais para cada fase da vida.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NeuroPulse | A Música ao Longo da Vida">
+    <meta property="og:description" content="Benefícios da música em cada fase do desenvolvimento humano">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload crítico -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="idade.css" as="style">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="idade.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "A Música ao Longo da Vida",
+        "description": "Descubra como a música impacta o desenvolvimento humano desde a gestação até a terceira idade",
+        "author": {
+            "@type": "Organization",
+            "name": "NeuroPulse"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "NeuroPulse"
+        },
+        "datePublished": "2024-01-01",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://neuropulse.com/idade.html"
+        }
+    }
+    </script>
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner" class="main-header">
+        <div class="header-container">
+            <a href="menu.html" class="logo" aria-label="NeuroPulse - Página inicial">
+                <div class="brand" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <span itemprop="name">NeuroPulse</span>
+                </div>
+            </a>
+            
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="Musicoterapia.html">Musicoterapia</a></li>
+                    <li><a href="Musicas.html">Músicas</a></li>
+                    <li><a href="artigos.html">Artigos</a></li>
+                    <li><a href="dop.html">Neurotransmissores</a></li>
+                    <li><a href="Quem-Somos.html">Sobre</a></li>
+                    <li><a href="idade.html" class="active">Benefícios</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+                    <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+                    <span class="sr-only">Alternar tema</span>
+                </button>
+                
+                <div class="user-profile-icon" id="userProfileIcon" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Menu do perfil">
+                    <img src="" alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+                    <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="Opções do perfil">
+                        <a href="perfil.html" class="dropdown-item" role="menuitem">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span>Meu Perfil</span>
+                        </a>
+                        <a href="configuracoes.html" class="dropdown-item" role="menuitem">
+                            <i class="fas fa-cog" aria-hidden="true"></i>
+                            <span>Configurações</span>
+                        </a>
+                        <div class="dropdown-divider" role="separator"></div>
+                        <button class="dropdown-item logout-btn" id="headerLogoutBtn" role="menuitem">
+                            <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                            <span>Sair</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content" role="main" itemprop="mainContentOfPage">
+        <article class="page-article" itemscope itemtype="https://schema.org/Article">
+            <header class="page-header" role="banner">
+                <div class="container">
+                    <h1 class="page-title" itemprop="headline">A Música ao Longo da Vida</h1>
+                    <p class="page-subtitle" itemprop="description">Descubra como a música impacta o desenvolvimento humano desde a gestação até a terceira idade</p>
+                    <meta itemprop="datePublished" content="2024-01-01">
+                    <meta itemprop="author" content="NeuroPulse">
+                </div>
+            </header>
+
+            <!-- Timeline Section -->
+            <section class="timeline-section" aria-labelledby="timeline-heading">
+                <div class="container">
+                    <h2 id="timeline-heading" class="sr-only">Linha do Tempo: Benefícios da Música em Diferentes Idades</h2>
+                    
+                    <div class="timeline-container" role="region" aria-label="Linha do tempo interativa">
+                        <!-- Gestação -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">Gestação</span>
+                                    <h3 class="timeline-title" itemprop="headline">Os Primeiros Sons</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    A partir da 20ª semana de gestação, o feto já é capaz de ouvir sons externos, incluindo música. 
+                                    Estudos mostram que bebês reconhecem músicas ouvidas no útero após o nascimento.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-gestacao">
+                                    <h4 id="benefits-gestacao" class="sr-only">Benefícios na Gestação</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Estimulação auditiva precoce</li>
+                                        <li role="listitem">Fortalecimento do vínculo mãe-bebê</li>
+                                        <li role="listitem">Desenvolvimento neural acelerado</li>
+                                        <li role="listitem">Redução do estresse materno</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-gestacao">
+                                    <h4 id="recommendations-gestacao" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-music" aria-hidden="true"></i>
+                                            <h5>Música Clássica</h5>
+                                            <p>Mozart, Vivaldi</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-heart" aria-hidden="true"></i>
+                                            <h5>Cantigas Suaves</h5>
+                                            <p>Nanas e melodias calmas</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-water" aria-hidden="true"></i>
+                                            <h5>Sons da Natureza</h5>
+                                            <p>Ondas, chuva suave</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                        </article>
+
+                        <!-- 0-3 anos -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">0-3 anos</span>
+                                    <h3 class="timeline-title" itemprop="headline">Fundamentos Musicais</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    Nesta fase, a música ajuda no desenvolvimento da linguagem, coordenação motora e habilidades sociais. 
+                                    Crianças expostas à música mostram melhor desenvolvimento cognitivo.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-0-3">
+                                    <h4 id="benefits-0-3" class="sr-only">Benefícios de 0-3 anos</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Desenvolvimento da linguagem</li>
+                                        <li role="listitem">Coordenação motora e ritmo</li>
+                                        <li role="listitem">Habilidades sociais através de canções em grupo</li>
+                                        <li role="listitem">Memória e reconhecimento de padrões</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-0-3">
+                                    <h4 id="recommendations-0-3" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-drum" aria-hidden="true"></i>
+                                            <h5>Canções Infantis</h5>
+                                            <p>Rítmicas e repetitivas</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-guitar" aria-hidden="true"></i>
+                                            <h5>Música Interativa</h5>
+                                            <p>Com gestos e dança</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-record-vinyl" aria-hidden="true"></i>
+                                            <h5>Diversidade Sonora</h5>
+                                            <p>Diferentes instrumentos</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-child"></i>
+                            </div>
+                        </article>
+
+                        <!-- 4-12 anos -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">4-12 anos</span>
+                                    <h3 class="timeline-title" itemprop="headline">Exploração Musical</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    Período ideal para introduzir instrumentos musicais. A música melhora o desempenho escolar, 
+                                    especialmente em matemática e leitura, além de desenvolver disciplina e autoexpressão.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-4-12">
+                                    <h4 id="benefits-4-12" class="sr-only">Benefícios de 4-12 anos</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Melhora no raciocínio lógico-matemático</li>
+                                        <li role="listitem">Desenvolvimento da criatividade</li>
+                                        <li role="listitem">Aprimoramento da concentração</li>
+                                        <li role="listitem">Habilidades de trabalho em grupo</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-4-12">
+                                    <h4 id="recommendations-4-12" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-piano" aria-hidden="true"></i>
+                                            <h5>Instrumentos Básicos</h5>
+                                            <p>Flauta, teclado, percussão</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-users" aria-hidden="true"></i>
+                                            <h5>Música em Grupo</h5>
+                                            <p>Coral, bandinha rítmica</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-book" aria-hidden="true"></i>
+                                            <h5>Música Educativa</h5>
+                                            <p>Canções com conteúdo didático</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                        </article>
+
+                        <!-- 13-19 anos -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">13-19 anos</span>
+                                    <h3 class="timeline-title" itemprop="headline">Identidade e Expressão</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    A música torna-se parte fundamental da identidade adolescente. Auxilia no processamento emocional, 
+                                    formação de grupos sociais e desenvolvimento da personalidade.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-13-19">
+                                    <h4 id="benefits-13-19" class="sr-only">Benefícios de 13-19 anos</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Ferramenta de expressão emocional</li>
+                                        <li role="listitem">Formação de identidade</li>
+                                        <li role="listitem">Alívio do estresse e ansiedade</li>
+                                        <li role="listitem">Desenvolvimento do pensamento crítico</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-13-19">
+                                    <h4 id="recommendations-13-19" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-headphones" aria-hidden="true"></i>
+                                            <h5>Diversos Gêneros</h5>
+                                            <p>Rock, pop, hip-hop, eletrônica</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-compact-disc" aria-hidden="true"></i>
+                                            <h5>Bandas Favoritas</h5>
+                                            <p>Identificação com artistas</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-music" aria-hidden="true"></i>
+                                            <h5>Criação Musical</h5>
+                                            <p>Composição, produção</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                        </article>
+
+                        <!-- 20-59 anos -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">20-59 anos</span>
+                                    <h3 class="timeline-title" itemprop="headline">Equilíbrio e Performance</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    Na vida adulta, a música serve como ferramenta para gerenciar estresse, melhorar a produtividade 
+                                    no trabalho e manter conexões sociais através de concertos e eventos musicais.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-20-59">
+                                    <h4 id="benefits-20-59" class="sr-only">Benefícios de 20-59 anos</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Gestão do estresse e ansiedade</li>
+                                        <li role="listitem">Melhora da produtividade no trabalho</li>
+                                        <li role="listitem">Manutenção de conexões sociais</li>
+                                        <li role="listitem">Expressão criativa contínua</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-20-59">
+                                    <h4 id="recommendations-20-59" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                            <h5>Música para Foco</h5>
+                                            <p>Ambient, clássica, instrumental</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-running" aria-hidden="true"></i>
+                                            <h5>Música para Exercícios</h5>
+                                            <p>High-energy, batidas marcantes</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-wind" aria-hidden="true"></i>
+                                            <h5>Música para Relaxar</h5>
+                                            <p>Jazz suave, sons ambientais</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                        </article>
+
+                        <!-- 60+ anos -->
+                        <article class="timeline-item" itemscope itemtype="https://schema.org/CreativeWork">
+                            <div class="timeline-content">
+                                <header class="timeline-header">
+                                    <span class="timeline-age" itemprop="temporalCoverage">60+ anos</span>
+                                    <h3 class="timeline-title" itemprop="headline">Memória e Bem-Estar</h3>
+                                </header>
+                                <p class="timeline-description" itemprop="description">
+                                    Na terceira idade, a música assume papel terapêutico importante, ajudando na preservação da memória, 
+                                    manutenção das funções cognitivas e proporcionando conforto emocional.
+                                </p>
+                                
+                                <section class="benefits-section" aria-labelledby="benefits-60">
+                                    <h4 id="benefits-60" class="sr-only">Benefícios 60+ anos</h4>
+                                    <ul class="benefits-list" role="list">
+                                        <li role="listitem">Estimulação da memória autobiográfica</li>
+                                        <li role="listitem">Melhora do humor e bem-estar</li>
+                                        <li role="listitem">Manutenção de funções cognitivas</li>
+                                        <li role="listitem">Redução de sintomas depressivos</li>
+                                    </ul>
+                                </section>
+                                
+                                <section class="music-recommendations" aria-labelledby="recommendations-60">
+                                    <h4 id="recommendations-60" class="section-subtitle">Recomendações Musicais</h4>
+                                    <div class="music-examples" role="list">
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-history" aria-hidden="true"></i>
+                                            <h5>Música do Passado</h5>
+                                            <p>Canções da juventude</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                                            <h5>Música Relaxante</h5>
+                                            <p>Para reduzir ansiedade</p>
+                                        </div>
+                                        <div class="music-card" role="listitem">
+                                            <i class="fas fa-users" aria-hidden="true"></i>
+                                            <h5>Música em Grupo</h5>
+                                            <p>Coral, dança sênior</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="timeline-icon" aria-hidden="true">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section class="research-section" aria-labelledby="research-heading" itemscope itemtype="https://schema.org/ItemList">
+                <div class="container">
+                    <header class="section-header">
+                        <h2 id="research-heading" class="section-title">Evidências Científicas</h2>
+                        <p class="section-intro">Baseado em pesquisas e estudos científicos comprovados</p>
+                    </header>
+                    
+                    <div class="research-grid" role="list">
+                        <article class="research-card" role="listitem" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                            <h3 itemprop="headline">Neuroplasticidade Musical</h3>
+                            <p itemprop="description">Estudos de neuroimagem mostram que o treinamento musical altera a estrutura cerebral, aumentando conexões neurais e melhorando funções cognitivas em todas as idades.</p>
+                            <meta itemprop="genre" content="Neurociência">
+                        </article>
+                        
+                        <article class="research-card" role="listitem" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                            <h3 itemprop="headline">Música e Memória</h3>
+                            <p itemprop="description">Pesquisas com idosos demonstram que a música familiar pode desencadear memórias autobiográficas mesmo em casos de demência avançada, melhorando a qualidade de vida.</p>
+                            <meta itemprop="genre" content="Gerontologia">
+                        </article>
+                        
+                        <article class="research-card" role="listitem" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                            <h3 itemprop="headline">Desenvolvimento Infantil</h3>
+                            <p itemprop="description">Crianças com educação musical mostram melhor desempenho em leitura, matemática e habilidades espaciais, além de maior capacidade de concentração.</p>
+                            <meta itemprop="genre" content="Desenvolvimento Infantil">
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion Section -->
+            <section class="conclusion-section" aria-labelledby="conclusion-heading">
+                <div class="container">
+                    <article class="conclusion" itemscope itemtype="https://schema.org/Conclusion">
+                        <h2 id="conclusion-heading" itemprop="headline">Música: Uma Companheira para Toda a Vida</h2>
+                        <div class="conclusion-content" itemprop="text">
+                            <p>A música nos acompanha desde os primeiros momentos no útero até os últimos anos de vida, moldando nosso desenvolvimento, expressando nossas emoções e fortalecendo nossas conexões com os outros e conosco mesmos.</p>
+                            <p>Em cada fase, a música assume diferentes funções e significados, mas sempre mantém seu poder transformador sobre a mente humana.</p>
+                        </div>
+                        <footer class="conclusion-actions">
+                            <a href="quiz.html" class="btn cta" aria-label="Descubra sua playlist ideal baseada na sua idade">
+                                <i class="fas fa-music" aria-hidden="true"></i>
+                                Descubra Sua Playlist Ideal
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="menu.html" class="logo" aria-label="NeuroPulse - Página inicial">
+                        <div class="brand">NeuroPulse</div>
+                    </a>
+                    <p class="footer-tagline">Conectando mente e música através da neurociência</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Links do rodapé">
+                    <ul class="footer-links">
+                        <li><a href="Musicoterapia.html">Musicoterapia</a></li>
+                        <li><a href="Musicas.html">Músicas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dop.html">Neurotransmissores</a></li>
+                        <li><a href="Quem-Somos.html">Sobre</a></li>
+                        <li><a href="idade.html"class="active">Benefícios</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCxXccXkt6LRiPYYd17piXxg" 
+                       aria-label="YouTube" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/neuropullse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                       aria-label="Instagram" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-meta">
+                    <p class="copyright">&copy; 2024 NeuroPulse. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="idade.js" defer></script>
+</body>
+</html>

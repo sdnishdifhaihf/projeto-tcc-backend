@@ -1,0 +1,772 @@
+/* menu.css */
+
+/* Variáveis CSS otimizadas */
+:root {
+  --bg: #07050a;
+  --panel: #0f0f13;
+  --muted: #9aa0a6;
+  --accent1: #8b5cf6;
+  --accent2: #ec4899;
+  --glass: rgba(255,255,255,0.04);
+  --text-light: #e6e6e6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.25);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* Reset otimizado */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-light);
+  background: linear-gradient(180deg, var(--bg), #040306 70%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+
+/* Melhorias de acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visível para acessibilidade */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent1);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 8, 12, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 36px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 6vw 120px;
+  min-height: 85vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-left {
+  z-index: 40;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 0 0 20px;
+  line-height: 1.1;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, var(--accent1) 50%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.try {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.try::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.try:hover::before {
+  left: 100%;
+}
+
+.try:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Right device */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 40;
+}
+
+.device-mock {
+  width: min(420px, 90vw);
+  height: min(420px, 90vw);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  box-shadow: 
+    var(--shadow-xl),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.device-mock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+/* Glowing brain */
+.brain-wrap {
+  width: 85%;
+  height: 85%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(closest-side, rgba(139,92,246,0.1), transparent 70%);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.brain-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.6));
+  border-radius: var(--radius-md);
+  animation: float 6s ease-in-out infinite;
+}
+
+.brain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.3) 0%, transparent 60%);
+  border-radius: var(--radius-lg);
+  mix-blend-mode: screen;
+  animation: pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Animated background waves */
+.waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.wave-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10vh;
+  width: 200%;
+  height: 60vh;
+  opacity: 0.15;
+}
+
+@keyframes moveWave {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(-25%) translateY(10px); }
+}
+
+/* Page sections */
+section {
+  padding: 100px 6vw;
+  border-top: 1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.03));
+}
+
+.panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.card {
+  background: var(--panel);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  opacity: 0.7;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(255,255,255,0.1);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  margin: 0 0 16px;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Dopamina Section */
+.dopamine-section {
+  padding: 100px 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(43, 21, 95, 0.7) 0%, rgba(28, 16, 58, 0.9) 100%);
+  border-radius: var(--radius-xl);
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: var(--shadow-xl);
+}
+
+.dopamine-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.dopamine-section h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 25px;
+  color: var(--text-light);
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+  justify-content: center;
+}
+
+.dopamine-section p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 30px;
+  color: var(--muted);
+}
+
+/* Curiosidades Section */
+.curiosities {
+  padding: 80px 0;
+}
+
+.accordion {
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion-item {
+  background: var(--panel);
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.accordion-header {
+  padding: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-light);
+  background: rgba(45, 27, 105, 0.3);
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background: rgba(45, 27, 105, 0.5);
+}
+
+.accordion-content {
+  padding: 0 22px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: var(--muted);
+  background: rgba(18, 8, 39, 0.5);
+}
+
+.accordion-content.active {
+  padding: 22px;
+  max-height: 500px;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, var(--bg) 0%, #000 100%);
+  padding: 50px 0 25px;
+  margin-top: 80px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  color: var(--muted);
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.social-links a:hover {
+  color: var(--accent1);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.copyright {
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent1);
+  box-shadow: 0 0 10px var(--accent1);
+  border-radius: 2px;
+}
+
+/* Modal de Neuroquímica */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.neurochemistry-modal {
+  background: linear-gradient(135deg, var(--panel) 0%, #1a1625 100%);
+  width: 90%;
+  max-width: 800px;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  position: relative;
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-overlay.active .neurochemistry-modal {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.neurochemistry-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  justify-content: center;
+}
+
+.neurotransmitter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.neurotransmitter-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.neurotransmitter-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+}
+
+.neurotransmitter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.neurotransmitter-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.neurotransmitter-card h3 i {
+  color: var(--accent1);
+}
+
+.neurotransmitter-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.chemical-formula {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  color: var(--accent1);
+  font-size: 0.9rem;
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .panel {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .device-mock {
+    width: min(320px, 80vw);
+    height: min(320px, 80vw);
+  }
+  
+  .brain-wrap {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .hero {
+    padding: 60px 5vw 80px;
+    min-height: auto;
+  }
+  
+  section {
+    padding: 60px 5vw;
+  }
+  
+  .card {
+    padding: 24px;
+  }
+  
+  .dopamine-section {
+    padding: 60px 0;
+    margin: 40px 0;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-links a {
+    font-size: 1.4rem;
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .neurochemistry-modal {
+    padding: 25px;
+    width: 95%;
+  }
+  
+  .neurotransmitter-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .accordion-header {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 12px 15px;
+  }
+  
+  .hero {
+    padding: 40px 4vw 60px;
+  }
+  
+  section {
+    padding: 40px 4vw;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .try {
+    padding: 14px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    gap: 12px;
+  }
+  
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

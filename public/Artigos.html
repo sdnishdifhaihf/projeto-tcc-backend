@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroPulse | Informações Científicas e Artigos sobre Música e Neurociência</title>
+  <meta name="description" content="Compreenda a base científica por trás da influência da música no cérebro e na cognição. Artigos e pesquisas sobre neurociência musical.">
+  <meta name="keywords" content="neurociência, música, cérebro, cognição, ondas cerebrais, dopamina, musicoterapia">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+
+  <link rel="stylesheet" href="Artigos.css">
+  <link rel="stylesheet" href="nav.css">
+<header>
+    <a href="menu.html" class="logo">
+        <div class="brand">NeuroPulse</div>
+    </a>
+    
+    <nav>
+        <!-- Seus links de navegação aqui -->
+        <a href="Musicoterapia.html">Musicoterapia</a>
+        <a href="Musicas.html">Músicas</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="dop.html">Dopamina</a>
+        <a href="Quem-Somos.html">Sobre</a>
+        <a href="idade.html">Beneficios</a> 
+        <a href="quiz.html">Quiz</a> 
+        <!-- Adicione o link para o perfil -->
+        <a href="perfil.html">Meu Perfil</a>
+    </nav>
+    
+    <div class="user-actions">
+        <!-- Botão do Tema -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        
+        <!-- ÍCONE DO PERFIL COM FOTO -->
+        <div class="user-profile-icon" id="userProfileIcon">
+            <img src="" alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="perfil.html" class="dropdown-item">
+                    <i class="fas fa-user"></i> Meu Perfil
+                </a>
+                <a href="configuracoes.html" class="dropdown-item">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+                <div class="dropdown-divider"></div>
+                <button class="dropdown-item logout-btn" id="headerLogoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <main class="main-container" role="main">
+    
+    <div class="page-header">
+      <h1 class="page-title">Informações Científicas</h1>
+      <p class="page-subtitle">Compreenda a base científica por trás da influência da música no cérebro e na cognição</p>
+    </div>
+    
+    <section class="info-section" aria-labelledby="fundamentos-neurociencia">
+      <h2 class="section-title" id="fundamentos-neurociencia">
+        <i class="fas fa-brain" aria-hidden="true"></i>
+        Fundamentos da Neurociência Musical
+      </h2>
+      
+      <div class="cards-grid">
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-wave-square" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Ondas Cerebrais</h3>
+          </div>
+          <div class="card-content">
+            <p>Nosso cérebro produz diferentes tipos de ondas elétricas dependendo do estado mental:</p>
+            <ul>
+              <li><strong>Delta (0.5-4 Hz):</strong> Sono profundo</li>
+              <li><strong>Theta (4-8 Hz):</strong> Relaxamento, meditação</li>
+              <li><strong>Alpha (8-12 Hz):</strong> Estado relaxado mas alerta</li>
+              <li><strong>Beta (12-30 Hz):</strong> Estado ativo, concentração</li>
+              <li><strong>Gamma (30-100 Hz):</strong> Processamento cognitivo superior</li>
+            </ul>
+          </div>
+        </article>
+        
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-music" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Como a Música Afeta o Cérebro</h3>
+          </div>
+          <div class="card-content">
+            <p>A música ativa múltiplas regiões cerebrais simultaneamente:</p>
+            <ul>
+              <li><strong>Córtex Auditivo:</strong> Processa elementos sonoros</li>
+              <li><strong>Sistema Límbico:</strong> Processa emoções e memórias</li>
+              <li><strong>Córtex Pré-frontal:</strong> Atenção e planejamento</li>
+              <li><strong>Área Motora Suplementar:</strong> Respostas motoras ao ritmo</li>
+              <li><strong>Hipocampo:</strong> Memória musical e associações</li>
+            </ul>
+          </div>
+        </article>
+        
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-heartbeat" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Neurotransmissores e Música</h3>
+          </div>
+          <div class="card-content">
+            <p>A música influencia a liberação de importantes neurotransmissores:</p>
+            <ul>
+              <li><strong>Dopamina:</strong> Prazer e recompensa</li>
+              <li><strong>Serotonina:</strong> Humor e bem-estar</li>
+              <li><strong>Oxitocina:</strong> Conexão social e confiança</li>
+              <li><strong>Endorfinas:</strong> Alívio da dor e euforia</li>
+              <li><strong>Cortisol:</strong> Redução do estresse</li>
+            </ul>
+            <p>Estudos mostram que música agradável pode aumentar a dopamina em até 9%.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section class="info-section" aria-labelledby="beneficios-comprovados">
+      <h2 class="section-title" id="beneficios-comprovados">
+        <i class="fas fa-chart-line" aria-hidden="true"></i>
+        Benefícios Comprovados
+      </h2>
+      
+      <div class="cards-grid">
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Aprendizado e Memória</h3>
+          </div>
+          <div class="card-content">
+            <p>A música pode melhorar significativamente o aprendizado e a retenção de informação:</p>
+            <ul>
+              <li>Aumento de 20-25% na retenção de vocabulário</li>
+              <li>Melhora na memória espacial</li>
+              <li>Facilitação da aprendizagem motora</li>
+              <li>Ondas alfa melhoram a absorção de informações</li>
+            </ul>
+            <p>O "Efeito Mozart" sugere que música clássica pode temporariamente melhorar o raciocínio espacial-temporal.</p>
+          </div>
+        </article>
+        
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Produtividade e Foco</h3>
+          </div>
+          <div class="card-content">
+            <p>Música adequada pode aumentar significativamente a produtividade:</p>
+            <ul>
+              <li>Até 15% de aumento na precisão de tarefas</li>
+              <li>Melhora na persistência em tarefas complexas</li>
+              <li>Redução de distrações em ambientes ruidosos</li>
+              <li>Otimização do estado de fluxo (flow state)</li>
+            </ul>
+            <p>Música instrumental e ambiente são mais eficazes para tarefas que exigem concentração.</p>
+          </div>
+        </article>
+        
+        <article class="info-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-title">Saúde Mental e Bem-estar</h3>
+          </div>
+          <div class="card-content">
+            <p>Os benefícios da música para a saúde mental são extensivamente documentados:</p>
+            <ul>
+              <li>Redução de até 65% nos níveis de estresse</li>
+              <li>Diminuição de sintomas de ansiedade e depressão</li>
+              <li>Melhora na qualidade do sono</li>
+              <li>Aumento da resiliência emocional</li>
+              <li>Estímulo à neuroplasticidade</li>
+            </ul>
+            <p>A musicoterapia é reconhecida como tratamento complementar para diversas condições.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section class="info-section" aria-labelledby="estatisticas-pesquisas">
+      <h2 class="section-title" id="estatisticas-pesquisas">
+        <i class="fas fa-chart-bar" aria-hidden="true"></i>
+        Estatísticas e Pesquisas
+      </h2>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">86%</div>
+          <div class="stat-label">aumento no desempenho em tarefas cognitivas com música otimizada</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">65%</div>
+          <div class="stat-label">redução nos níveis de cortisol com música relaxante</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">47%</div>
+          <div class="stat-label">mais pessoas atingem estado de fluxo com estímulos sonoros</div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-value">92%</div>
+          <div class="stat-label">dos usuários relatam melhor qualidade de sono</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="info-section" aria-labelledby="perguntas-frequentes">
+      <h2 class="section-title" id="perguntas-frequentes">
+        <i class="fas fa-question-circle" aria-hidden="true"></i>
+        Perguntas Frequentes
+      </h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Como a música afeta diferentes tipos de personalidade?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Pesquisas mostram que extrovertidos geralmente preferem música mais energética e complexa, enquanto introvertidos tendem a se beneficiar mais de sons ambientais e instrumentais. No entanto, a resposta individual à música é altamente variável e influenciada por experiências pessoais, memórias e associações emocionais.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Existe um "tipo ideal" de música para estudar?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Geralmente, música instrumental sem letras é mais eficaz para estudos, pois reduz a competição por recursos cognitivos. Ritmos entre 60-80 BPM (batidas por minuto) tendem a sincronizar com ondas cerebrais alfa, ideal para concentração. Música clássica, ambiente e sons da natureza são frequentemente recomendados, mas a preferência individual é um fator importante.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Quanto tempo leva para sentir os efeitos da música no cérebro?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Alguns efeitos são imediatos - mudanças no humor podem ocorrer em minutos. Para benefícios cognitivos sustentados, sessões de 15-30 minutos são geralmente recomendadas. Mudanças neuroplásticas mais profundas (como melhorias na memória ou criatividade) podem levar várias semanas de uso consistente.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>As frequências binaurais realmente funcionam?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Estudos mostram resultados mistos. Algumas pesquisas indicam que frequências binaurais podem influenciar levemente os padrões de ondas cerebrais, enquanto outras não encontram efeitos significativos. A resposta parece variar entre indivíduos. O consenso científico atual é que podem ter efeitos modestos em algumas pessoas, mas não são uma solução milagrosa.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Posso me tornar dependente da música para me concentrar?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Embora a música possa se tornar um hábito útil, a dependência verdadeira é rara. É benéfico variar os estímulos sonoros e ocasionalmente praticar o foco em silêncio para manter a flexibilidade cognitiva. O objetivo é usar a música como ferramenta, não como muleta permanente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-header" style="margin-top: 60px;">
+      <h1 class="page-title">Artigos Científicos</h1>
+      <p class="page-subtitle">Pesquisas e estudos sobre os efeitos da música no cérebro, cognição e bem-estar</p>
+    </div>
+    
+    <div class="filters" role="group" aria-label="Filtros de categoria">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="neurociencia">Neurociência</button>
+      <button class="filter-btn" data-filter="psicologia">Psicologia</button>
+      <button class="filter-btn" data-filter="medicina">Medicina</button>
+      <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+    </div>
+    
+    <section class="featured-section" aria-labelledby="artigos-destaque">
+      <h2 class="section-title" id="artigos-destaque">
+        <i class="fas fa-star" aria-hidden="true"></i>
+        Artigos em Destaque
+      </h2>
+      
+      <div class="articles-grid">
+        <article class="article-card" data-category="neurociencia">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">Efeitos da Música nas Ondas Cerebrais e Cognição</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Dr. Ana Silva
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  15 Mar 2023
+                </div>
+              </div>
+              <div class="article-category">Neurociência</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Estudo longitudinal investigando como diferentes gêneros musicais influenciam padrões de ondas cerebrais e performance em tarefas cognitivas. Resultados mostram aumento de 23% na precisão durante tarefas que exigem atenção sustentada.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+        
+        <article class="article-card" data-category="psicologia">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">Musicoterapia na Redução de Ansiedade e Estresse</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Prof. Carlos Mendes
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  02 Fev 2023
+                </div>
+              </div>
+              <div class="article-category">Psicologia</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Pesquisa com 150 participantes demonstra que sessões regulares de musicoterapia reduziram significativamente os níveis de cortisol e relatos de sintomas de ansiedade. Efeitos foram mantidos em follow-up de 6 meses.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+        
+        <article class="article-card" data-category="medicina">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-stethoscope" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">Música como Intervenção Não-farmacológica na Dor Crônica</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Dra. Maria Oliveira
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  18 Jan 2023
+                </div>
+              </div>
+              <div class="article-category">Medicina</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Revisão sistemática de 27 estudos clínicos sobre o uso da música no manejo da dor. Evidências consistentes mostram redução de 20-30% na percepção da dor e menor uso de analgésicos em diversos contextos clínicos.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section class="featured-section" aria-labelledby="artigos-recentes">
+      <h2 class="section-title" id="artigos-recentes">
+        <i class="fas fa-clock" aria-hidden="true"></i>
+        Artigos Recentes
+      </h2>
+      
+      <div class="articles-grid">
+        <article class="article-card" data-category="tecnologia">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-microchip" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">IA na Personalização de Experiências Musicais para Saúde Mental</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Dr. Roberto Santos
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  05 Abr 2023
+                </div>
+              </div>
+              <div class="article-category">Tecnologia</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Desenvolvimento de algoritmo de machine learning que adapta playlists em tempo real baseado em respostas fisiológicas. Sistema demonstrou eficácia 47% superior compared to playlists pré-selecionadas.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+        
+        <article class="article-card" data-category="neurociencia">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-wave-square" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">Sincronização Neural Durante Performance Musical em Grupo</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Dra. Fernanda Lima
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  22 Mar 2023
+                </div>
+              </div>
+              <div class="article-category">Neurociência</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Estudo com EEG mostra que músicos em ensemble exibem padrões de sincronização neural durante performances. Esta sincronização correlaciona-se com avaliações de qualidade artística por especialistas.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+        
+        <article class="article-card" data-category="psicologia">
+          <div class="article-header">
+            <div class="article-icon">
+              <i class="fas fa-child" aria-hidden="true"></i>
+            </div>
+            <div class="article-info">
+              <h3 class="article-title">Desenvolvimento Cognitivo em Crianças Expostas à Educação Musical</h3>
+              <div class="article-meta">
+                <div class="article-author">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Prof. João Pereira
+                </div>
+                <div class="article-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  10 Mar 2023
+                </div>
+              </div>
+              <div class="article-category">Psicologia</div>
+            </div>
+          </div>
+          <p class="article-abstract">
+            Estudo de 5 anos com 200 crianças mostra que aquelas com educação musical regular desenvolveram habilidades de memória, linguagem e raciocínio espacial significativamente superiores ao grupo controle.
+          </p>
+          <div class="article-actions">
+            <a href="#" class="action-btn primary">
+              <i class="fas fa-book-open" aria-hidden="true"></i>
+              Ler Artigo
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              PDF
+            </a>
+            <a href="#" class="action-btn">
+              <i class="fas fa-share" aria-hidden="true"></i>
+              Compartilhar
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+
+  </main>
+  
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="logo" style="justify-content: center;">
+        <div class="brand">NeuroPulse</div>
+      </div>
+      <p style="margin: 20px 0; color: var(--muted);">Desvendando os mistérios da mente através do som</p>
+      
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+      
+      <p class="copyright">&copy; 2025 NeuroPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+ 
+  <script src="Artigos.js" defer></script> 
+  <script src="nav.js" defer></script>
+</body>
+</html>

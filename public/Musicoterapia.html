@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NeuroPulse - Musicoterapia: A ciência que utiliza a música para promover saúde, bem-estar e qualidade de vida">
+  <title>NeuroPulse | Musicoterapia</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Musicoterapia.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+  <header>
+    <a href="menu.html" class="logo" aria-label="Ir para a página inicial">
+      <div class="brand">NeuroPulse</div>
+    </a>
+    
+    <nav aria-label="Navegação principal">
+      <a href="Musicoterapia.html" class="active">Musicoterapia</a>
+      <a href="Musicas.html">Músicas</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="dop.html">Dopamina</a>
+      <a href="Quem-Somos.html">Sobre</a>
+      <a href="beneficios.html">Benefícios</a> 
+      <a href="quiz.html">Quiz</a> 
+      <a href="perfil.html">Meu Perfil</a>
+    </nav>
+    
+    <div class="user-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre tema claro e escuro">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      
+      <div class="user-profile-icon" id="userProfileIcon" tabindex="0" aria-label="Menu do perfil">
+        <img src="" alt="Foto do perfil" id="profileIconImg" class="profile-icon-img">
+        <div class="profile-dropdown" id="profileDropdown">
+          <a href="perfil.html" class="dropdown-item">
+            <i class="fas fa-user"></i> Meu Perfil
+          </a>
+          <a href="configuracoes.html" class="dropdown-item">
+            <i class="fas fa-cog"></i> Configurações
+          </a>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item logout-btn" id="headerLogoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Sair
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Musicoterapia</h1>
+      <p class="page-subtitle">A ciência que utiliza a música para promover saúde, bem-estar e qualidade de vida através de intervenções terapêuticas baseadas em evidências</p>
+    </div>
+    
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Transformando Vidas Através da Música</h2>
+        <p>A musicoterapia é uma prática clínica baseada em evidências que utiliza intervenções musicais para atingir objetivos terapêuticos dentro de uma relação terapêutica.</p>
+        <p>Profissionais qualificados utilizam a música para abordar necessidades físicas, emocionais, cognitivas e sociais de indivíduos de todas as idades.</p>
+        
+        <button id="show-info-btn" class="cta" aria-expanded="false" aria-controls="more-info">
+          <i class="fas fa-heart"></i>
+          Conhecer Benefícios
+        </button>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <i class="fas fa-hand-holding-heart"></i>
+      </div>
+    </section>
+    
+    <div id="more-info" class="info-hidden" role="region" aria-labelledby="hero-title">
+
+      <section class="info-section" aria-labelledby="o-que-e">
+        <h2 class="section-title" id="o-que-e">
+          <i class="fas fa-music"></i>
+          O Que é Musicoterapia?
+        </h2>
+        
+        <div class="cards-grid">
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="card-title">Definição Científica</h3>
+            </div>
+            <div class="card-content">
+              <p>A musicoterapia é o uso clínico e baseado em evidências de intervenções musicais para realizar objetivos individualizados dentro de uma relação terapêutica por um profissional credenciado.</p>
+              <p>Diferente da educação musical ou entretenimento, a musicoterapia foca em necessidades terapêuticas específicas usando a música como ferramenta de mudança.</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3 class="card-title">Profissional Qualificado</h3>
+            </div>
+            <div class="card-content">
+              <p>Musicoterapeutas são profissionais com formação superior que completaram um programa aprovado e estágio clínico, sendo credenciados para praticar.</p>
+              <p>Eles avaliam pontos fortes e necessidades de cada cliente e desenvolvem planos de tratamento individualizados usando várias abordagens musicais.</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-history"></i>
+              </div>
+              <h3 class="card-title">História e Reconhecimento</h3>
+            </div>
+            <div class="card-content">
+              <p>A musicoterapia moderna emergiu após a Segunda Guerra Mundial, quando músicos visitavam hospitais veteranos e observavam respostas físicas e emocionais positivas.</p>
+              <p>Hoje é reconhecida como profissão de saúde aliada em muitos países, com pesquisas comprovando sua eficácia em diversos contextos clínicos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="info-section" id="beneficios" aria-labelledby="beneficios-title">
+        <h2 class="section-title" id="beneficios-title">
+          <i class="fas fa-star"></i>
+          Benefícios da Musicoterapia
+        </h2>
+        
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3 class="benefit-title">Saúde Física</h3>
+            <p class="benefit-description">Redução da pressão arterial, alívio da dolor, melhora da coordenação motora e reabilitação física através do ritmo e movimento.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3 class="benefit-title">Saúde Mental</h3>
+            <p class="benefit-description">Redução de ansiedade e depressão, gestão do estresse, expressão emocional e desenvolvimento de coping skills.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="benefit-title">Função Cognitiva</h3>
+            <p class="benefit-description">Estimulação da memória, melhora da atenção, aumento da concentração e manutenção de funções executivas.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="benefit-title">Habilidades Sociais</h3>
+            <p class="benefit-description">Desenvolvimento de comunicação, habilidades de interação social, trabalho em grupo e expressão interpessoal.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <h3 class="benefit-title">Desenvolvimento</h3>
+            <p class="benefit-description">Apoio ao desenvolvimento infantil, habilidades motoras, linguagem e processamento sensorial em todas as idades.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h3 class="benefit-title">Bem-estar Espiritual</h3>
+            <p class="benefit-description">Exploração de significado, propósito existencial, conexão e expressão espiritual através da experiência musical.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="info-section" aria-labelledby="tecnicas-title">
+        <h2 class="section-title" id="tecnicas-title">
+          <i class="fas fa-tools"></i>
+          Técnicas e Abordagens
+        </h2>
+        
+        <div class="techniques-container">
+          <div class="technique-item">
+            <div class="technique-number">1</div>
+            <div class="technique-content">
+              <h3>Improvisação Musical</h3>
+              <p>Criação espontânea de música usando voz, instrumentos ou sons corporais para expressão emocional e desenvolvimento criativo.</p>
+              <ul>
+                <li>Permite expressão não-verbal de emoções</li>
+                <li>Desenvolve habilidades de tomada de decisão</li>
+                <li>Promove autoexpressão autêntica</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="technique-item">
+            <div class="technique-number">2</div>
+            <div class="technique-content">
+              <h3>Composição</h3>
+              <p>Criação de músicas, letras ou arranjos para processar experiências, comunicar sentimentos e desenvolver habilidades criativas.</p>
+              <ul>
+                <li>Organização de pensamentos e emoções</li>
+                <li>Desenvolvimento de narrativa pessoal</li>
+                <li>Criação de legado musical</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="technique-item">
+            <div class="technique-number">3</div>
+            <div class="technique-content">
+              <h3>Receptiva à Música</h3>
+              <p>Escuta de música selecionada para relaxamento, evocação de memórias, processamento emocional e estimulação sensorial.</p>
+              <ul>
+                <li>Redução de ansiedade e estresse</li>
+                <li>Ativação de memórias e emoções</li>
+                <li>Preparação para outras intervenções</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="technique-item">
+            <div class="technique-number">4</div>
+            <div class="technique-content">
+              <h3>Performance Musical</h3>
+              <p>Reprodução de música precomposta para desenvolver habilidades, construir confiança e promover realização pessoal.</p>
+              <ul>
+                <li>Desenvolvimento de autoconfiança</li>
+                <li>Melhora de habilidades motoras</li>
+                <li>Experiência de realização e sucesso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="info-section" aria-labelledby="aplicacoes-title">
+        <h2 class="section-title" id="aplicacoes-title">
+          <i class="fas fa-stethoscope"></i>
+          Aplicações Clínicas
+        </h2>
+        
+        <div class="applications-grid">
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3 class="application-title">Hospitais</h3>
+            <p class="application-description">Gestão da dor, redução de ansiedade pré-cirúrgica, apoio emocional para pacientes e famílias, e reabilitação física.</p>
+          </div>
+          
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <h3 class="application-title">Escolas</h3>
+            <p class="application-description">Desenvolvimento de habilidades sociais, apoio a necessidades especiais, redução de ansiedade e melhora do foco acadêmico.</p>
+          </div>
+          
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="application-title">Idosos</h3>
+            <p class="application-description">Estimulação cognitiva, manejo de demência, redução de isolamento social e manutenção de habilidades funcionais.</p>
+          </div>
+          
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="application-title">Saúde Mental</h3>
+            <p class="application-description">Tratamento de depressão, ansiedade, PTSD, transtornos alimentares e apoio em recuperação de dependências.</p>
+          </div>
+          
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-wheelchair"></i>
+            </div>
+            <h3 class="application-title">Reabilitação</h3>
+            <p class="application-description">Recuperação de AVC, lesões cerebrais, desenvolvimento motor em paralisia cerebral e condições neurológicas.</p>
+          </div>
+          
+          <div class="application-card">
+            <div class="application-icon">
+              <i class="fas fa-baby"></i>
+            </div>
+            <h3 class="application-title">Desenvolvimento Infantil</h3>
+            <p class="application-description">Apoio ao desenvolvimento típico e intervenção precoce para autismo, atrasos e condições do desenvolvimento.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta-section" aria-labelledby="cta-title">
+        <h2 id="cta-title">Pronto para Explorar o Poder da Musicoterapia?</h2>
+        <p>Descubra como a música pode transformar sua saúde e bem-estar através de abordagens científicas e personalizadas.</p>
+        <div class="cta-buttons">
+          <a href="tela.profissionais.html" class="cta">
+            <i class="fas fa-calendar-check"></i>
+            Agendar Consulta
+          </a>
+          <a href="artigos.html" class="cta secondary">
+            <i class="fas fa-book"></i>
+            Ver Pesquisas
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="brand">NeuroPulse</div>
+      </div>
+      <p class="footer-text">Transformando vidas através da ciência do som</p>
+      
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      
+      <p class="copyright">&copy; 2023 NeuroPulse. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="Musicoterapia.js"></script>
+  <script src="nav.js" defer></script>
+</body>
+</html>
